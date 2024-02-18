@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reviews</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+  50% { text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF; }
+  100% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #00BFFF;
+  animation: glow 1.5s infinite alternate;
+  letter-spacing: 4px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  width:100%; /* Adjust width based on the number of cards per row */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgb(97, 218, 255);
+  margin: 20px;
+  justify-content: space-between;
+  background-color: rgb(116, 118, 119);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stars {
+  color: #FFD700;
+}
+
+.review {
+  margin-top: 20px;
+}
+
+.review p {
+  line-height: 1.6;
+}
+
+</style>
+</head>
+<body bgcolor="black">
+
+<header>
+    <h1>Reviews</h1>
+</header>
+
+<div class="container">
+    <div class="card">
+        <div class="card-content">
+            <div class="profile">
+                <img src="background.jpg" alt="Customer 1">
+                <div class="profile-info">
+                    <h3>Priya Hamza</h3>
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                </div>
+            </div>
+            <div class="review">
+                <p>
+                    "I had a disappointing experience with this website. The car I received had several issues, and the customer service was unresponsive when I tried to address them. I would not recommend this website to others."</p>
+            </div>
+        </div>
+
+        
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="card-content">
+                <div class="profile">
+                    <img src="card_img.png" alt="Customer 1">
+                    <div class="profile-info">
+                        <h3>Kabir khan</h3>
+                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    </div>
+                </div>
+                <div class="review">
+                    <p>
+                        "I love how this website provides detailed information about each car's features. It made it easy for me to compare different models and choose the one that best suited my needs. The interactive interface also enhanced my browsing experience."</p>
+                </div>
+            </div>
+    
+            
+        </div>
+        <div class="container">
+            <div class="card">
+                <div class="card-content">
+                    <div class="profile">
+                        <img src="blog-1.jpg" alt="Customer 1">
+                        <div class="profile-info">
+                            <h3>Neha sohail</h3>
+                            <div class="stars">&#9733;&#9733;&#9733;&#9733;</div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <p> Neha:
+                            "I found great value for money on this website. The prices were competitive, and the quality of the cars exceeded my expectations. I feel like I got a great deal, and I would definitely consider purchasing from here again in the future."</p>
+                    </div>
+                </div>
+        
+                
+            </div>
+            <div class="container">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="profile">
+                            <img src="car-5.jpg" alt="Customer 1">
+                            <div class="profile-info">
+                                <h3>Riya Ahmed</h3>
+                                <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <p>
+                                "Navigating this website was a breeze! The layout is clean and intuitive, making it easy to find the information I needed. I appreciated how user-friendly the interface was, especially when comparing different car models."</p>
+                        </div>
+                    </div>
+            
+                    
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="profile">
+                                <img src="hero-banner.jpg" alt="Customer 1">
+                                <div class="profile-info">
+                                    <h3> Aarav</h3>
+                                    <div class="stars">&#9733;&#9733;&#9733;&#9733;</div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <p>
+                                    "I recently purchased a car from this website and I must say, I am thoroughly impressed! The process was seamless, the car exceeded my expectations, and the customer service was exceptional. Highly recommended!"</p>
+                            </div>
+                        </div>
+                
+                        
+                    </div>
+                    <div class="container">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="profile">
+                                    <img src="car-3.jpg" alt="Customer 1">
+                                    <div class="profile-info">
+                                        <h3>Arjun Arora</h3>
+                                        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                                    </div>
+                                </div>
+                                <div class="review">
+                                    <p>
+                                        "I was impressed by the efficiency of the shipping and delivery process. My car arrived on time and in perfect condition. The website provided regular updates throughout the delivery process, giving me peace of mind. Overall, a smooth and hassle-free experience.</p>
+                                </div>
+                            </div>
+                    
+                            
+                        </div>
+
+</div></body></html>

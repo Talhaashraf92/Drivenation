@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Hover Effect</title>
+<link rel="stylesheet" href="tu.css">
+<style>
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+  50% { text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF; }
+  100% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #00BFFF;
+  animation: glow 1.5s infinite alternate;
+  letter-spacing: 4px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card-hover-effect {
+  width: 300px; /* Adjust the width as needed */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(34, 144, 196, 0.3); /* Sky blue shadow */
+  overflow: hidden;
+  transition: box-shadow 0.5s ease-in-out;
+  margin-bottom: 20px; /* Add some spacing between cards */
+}
+
+.card-hover-effect:hover {
+  box-shadow: 0 10px 20px rgba(94, 211, 247, 0.836); /* Increased shadow on hover */
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-hover-effect:hover .image-box img {
+  transform: scale(1.1);
+  filter: grayscale(0.8);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Sky blue background */
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.card-hover-effect:hover .content {
+  opacity: 1;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #00BFFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00688B;
+}
+
+
+.search-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+
+        .search-bar {
+            width: 200px;
+            height: 15px;
+            border-radius: 15px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            transition: width 0.3s ease-in-out;
+            background-color: white;
+            color: black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-button {
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 0 20px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-left: 10px;
+        }
+
+        .search-button:hover {
+            background-color: #00688b;
+        }
+
+
+
+</style>
+</head>
+<body style="background-color: black;">
+<header>
+<h1><u>(Honda Models)</u></h1>
+
+<div class="container">
+    <center>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button" onclick="clearText()">Search</button>
+    </center>
+    </div>
+    <div class="background"></div>
+</div>
+
+<script>
+    function clearText() {
+        var inputField = document.querySelector('.search-bar');
+        inputField.value = '';
+    }
+</script>
+
+
+
+</header>
+
+<div class="card-container">
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/0037d8af3b341851/2024-Honda-Accord-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="bZ4X">
+            <div class="content">
+                <p><a style="color: #00BFFF;">(ACOORD)</a> <br>Starting MSRP <br>$28,100 </p>
+                
+                <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/f930b1c80b91136d/2024-Honda-Civic-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <p><a style="color: #00BFFF; font-weight: bolder;">(CIVIC) </a> <br> 
+                Starting MSRP <BR>$24,515</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/4f45fb33268b2890/2024-Honda-CR-V-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <p> <a style="color: #00BFFF;">(CR-V)</a> <br>
+                    Starting MSRP <BR>$30,515</p>
+                        <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-container center-row">
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/5acb6574e41b6bfe/2024-Honda-HR-V-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <a style="color: #00BFFF;">(C-HR)</a> <br>
+                Starting MSRP <BR>$25,615</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/2f98c332d7c16ad4/2024-Toyota-Corolla-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p> <a style="color: #00BFFF;">(HR-V)</a> <br>
+                Starting MSRP <BR>$23,145</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/8e9dfb1b7451f9e5/2024-Honda-Odyssey-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p><a style="color: #00BFFF;">(ODYSSEY)</a><br>
+                Starting MSRP <BR>$39,210</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-container center-row">
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/a94589351d866873/2024-Honda-Passport-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p> <a style="color: #00BFFF;">(PASPORT)</a><br>
+                Starting MSRP <BR>$24,400</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/85e1570d181d969c/2024-Honda-Pilot-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <a style="color: #00BFFF;">(POILOT)</a><br>Starting MSRP <BR>$38,445</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/e3345351723996f4/2023-Honda-Ridgeline-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p> <a style="color: #00BFFF;">(RIDGELINE)</a><br>
+                Starting MSRP <BR>$40,195</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
+
+
+
+

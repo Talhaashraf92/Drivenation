@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@codewith_muhilan</title>
+    <link rel="stylesheet" href="tutu.css">
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Basic&family=Poppins&display=swap");
+
+        :root {
+            --background: #000000;
+            --background-border: #00fffc;
+            --clr: #00fffc; /* Color for the header text */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Poppins;
+            background-color: var(--background);
+            padding: 20px;
+        }
+
+        header {
+            background-color: transparent; /* Updated header background */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header div {
+            position: relative;
+            font-size: 5rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 80px;
+            cursor: pointer;
+            display: inline-block;
+            color: var(--clr); /* Set the header text color */
+            -webkit-text-stroke: 1px rgb(0, 0, 0);
+        }
+
+        .hover-text {
+            position: absolute;
+            inset: 0;
+            width: 0%;
+            overflow: hidden;
+            border-right: 6px solid var(--clr);
+            transition: 0.5s ease-in-out;
+            background-color: #00fffc;
+        }
+
+        header div:hover .hover-text {
+            width: 100%;
+            filter: drop-shadow(0 0 40px var(--clr));
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            position: relative;
+            width: calc(20% - 20px); /* 20% to fit 5 images in a row with gap of 20px */
+            background-color: var(--background);
+            border-radius: 8px;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5); /* Initial shadow */
+            overflow: hidden;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Include box-shadow in transition */
+        }
+
+        .card:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #00fffc; /* Shadow on hover */
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            color: #00fffc;
+        }
+
+        .tuta {
+            padding: 10px 20px;
+            color: #04b8e6e8;
+            font-weight: 700;
+            border: 1px solid #04b8e6e8;
+            border-radius: 20px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tuta:hover {
+            background-color: #04b8e6e8;
+            color:#00fffc ;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                width: calc(50% - 20px); /* 50% width for smaller screens */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .card {
+                width: calc(100% - 20px); /* Full width for smallest screens */
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div>
+        <span class="text">Discover Your Dream Ride</span>
+        <span class="hover-text">find your car</span>
+    </div>
+</header> 
+
+<div class="gallery">
+    <article class="card">
+        <img src="honda.jpg" alt="Winter Forest">
+        <div class="card-content">
+            <h3>HONDA</h3>
+        </div>
+        <div class="button-container">
+          <button class="tuta"><A style="color: #00fffc;" href="honda.HTML">Click Me</A></button>
+        </div>
+    </article>
+
+    <article class="card">
+        <img src="42daa1521c140c25dea3bb1c815b6104.jpg" alt="Winter Forest" style="height: 140px;">
+        <div class="card-content">
+            <h3>CADILLAC ESCALADE</h3>
+        </div>
+        <div class="button-container">
+          <button class="tuta"><A style="color: #00fffc;" href="candillac.html">Click Me</A></button>
+        </div>
+    </article>
+
+    <article class="card">
+        <img src="BNW.jpg" alt="Lavender Field" style="height: 200PX;">
+        <div class="card-content">
+            <h3>BMW</h3>
+        </div>
+        <div class="button-container">
+          <button class="tuta"><A style="color: #00fffc;" href="BMW.HTML">Click Me</A></button>
+        </div>
+    </article>
+    
+    <article class="card">
+        <img src="toyota.jpg" alt="Wooden Bridge">
+        <div class="card-content">
+            <h3>TOYOTA</h3>
+        </div>
+        <div class="button-container">
+          <button class="tuta"><A style="color: #00fffc;" href="toyota.HTML">Click Me</A></button>
+        </div>
+    </article>
+
+    <article class="card">
+        <img src="hundai.jpg" alt="Wooden Bridge">
+        <div class="card-content">
+            <h3>
+              HYUNDAI</h3>
+        </div>
+        <div class="button-container">
+          <button class="tuta"><A style="color: #00fffc;" href="hundai.html">Click Me</A></button>
+        </div>
+    </article>
+</div>
+
+<footer>
+    <!-- Your footer content here -->
+</footer>
+
+</body>
+</html>

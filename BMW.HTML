@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Hover Effect</title>
+<link rel="stylesheet" href="tu.css">
+<style>
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+  50% { text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF; }
+  100% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 20px;
+  color: #00BFFF;
+  animation: glow 1.5s infinite alternate;
+  letter-spacing: 4px;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: center; /* Center the cards horizontally */
+}
+
+.card-hover-effect {
+  width: 300px; /* Adjust the width as needed */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(34, 144, 196, 0.3); /* Sky blue shadow */
+  overflow: hidden;
+  transition: box-shadow 0.5s ease-in-out;
+  margin-bottom: 20px; /* Add some spacing between cards */
+}
+
+.card-hover-effect:hover {
+  box-shadow: 0 10px 20px rgba(94, 211, 247, 0.836); /* Increased shadow on hover */
+}
+
+.image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-box img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card-hover-effect:hover .image-box img {
+  transform: scale(1.1);
+  filter: grayscale(0.8);
+}
+
+.content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Sky blue background */
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.card-hover-effect:hover .content {
+  opacity: 1;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+}
+
+.button {
+  background-color: #00BFFF;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #00688B;
+}
+
+
+.search-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+        }
+
+        .search-bar {
+            width: 200px;
+            height: 15px;
+            border-radius: 15px;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            transition: width 0.3s ease-in-out;
+            background-color: white;
+            color: black;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-button {
+            background-color: #00bfff;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 0 20px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+            margin-left: 10px;
+        }
+
+        .search-button:hover {
+            background-color: #00688b;
+        }
+
+
+
+</style>
+</head>
+<body style="background-color: black;">
+<header>
+<h1><u>(BMW Models)</u></h1>
+
+<div class="container">
+    <center>
+    <div class="search-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+        <button class="search-button" onclick="clearText()">Search</button>
+    </center>
+    </div>
+    <div class="background"></div>
+</div>
+
+<script>
+    function clearText() {
+        var inputField = document.querySelector('.search-bar');
+        inputField.value = '';
+    }
+</script>
+
+
+
+</header>
+
+<div class="card-container">
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/5f49b83a2a29c795/2024-BMW-2_Series-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="bZ4X">
+            <div class="content">
+                <p><a style="color: #00BFFF;">(2 Series)</a> <br>Starting MSRP <br>$39,465 </p>
+                
+                <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/6e5bc64dc1232179/2024-BMW-3_Series-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <p><a style="color: #00BFFF; font-weight: bolder;">(3 Series) </a> <br> 
+                Starting MSRP <BR>$42,575</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/dd35fdbfbf2d9553/2024-BMW-4_Series-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <p> <a style="color: #00BFFF;">(4 Series)</a> <br>
+                    Starting MSRP <BR>$49,515</p>
+                        <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-container center-row">
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/efdc1c00ef425035/2024-BMW-5_Series-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <a style="color: #00BFFF;">(5 Series)</a> <br>
+                Starting MSRP <BR>$58,615</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/1edf19acb4d1f79c/2024-BMW-7_Series-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p> <a style="color: #00BFFF;">(7 Series)</a> <br>
+                Starting MSRP <BR>$97,145</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/b9344ebca95dbcd1/2024-BMW-8_Series-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p><a style="color: #00BFFF;">(8 Series)</a><br>
+                Starting MSRP <BR>$91,210</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card-container center-row">
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/32922d7c9a58dc32/2024-BMW-i4-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p> <a style="color: #00BFFF;">(i4)</a><br>
+                Starting MSRP <BR>$53,400</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/539d2c8e073ea820/2024-BMW-i5-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+                <a style="color: #00BFFF;">(i5)</a><br>Starting MSRP <BR>$67,445</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-hover-effect">
+        <div class="image-box">
+            <img src="https://static.tcimg.net/vehicles/primary/d948bc14f54c3605/2024-BMW-iX-white-full_color-driver_side_front_quarter.png?auto=format&bg=white&h=120&w=240" alt="Image">
+            <div class="content">
+               <p> <a style="color: #00BFFF;">(ix)</a><br>
+                Starting MSRP <BR>$89,195</p>
+                    <A href="buy.html"><button class="button">Buy Now</button></A>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+</body>
+</html>
+
+
+
+

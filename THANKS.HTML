@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Car Booking</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Black background */
+            color: #00FFFF; /* Aqua color for text */
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .message {
+            background-color: #111; /* Dark background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(4, 255, 255); /* Aqua shadow */
+        }
+        h1 {
+            color: #44c9ce; /* Aqua color for heading */
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .thank-you {
+            color: #0e6d85; /* Green color for thank you message */
+            font-weight: bold;
+        }
+        .delivery-info {
+            margin-top: 50px;
+        }
+        .delivery-info p {
+            color: #888;
+        }
+        .delivery-info p:last-child {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .contact-number {
+            color: #00FFFF; /* Aqua color for contact number */
+            font-weight: bold;
+        }
+        .btn {
+            background-color: #042630; /* Green color for button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1ee3f1; /* Dark green color on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <h1>Your Order is Confirmed!</h1>
+            <p class="thank-you">Thank you for booking your car with us!</p>
+            <p style="color: white;">Your car has been reserved successfully and will be delivered to you within one week.</p>
+            <p style="color: #fff;">If you have any questions regarding your order, please feel free to contact us at <BR> <br><span class="contact-number">0321 222 6543</span>.</p>
+        </div>
+        <div class="delivery-info">
+            <p>We appreciate your trust in us.</p>
+        </div>
+        <a href="index.html" class="btn">Back to Home</a>
+    </div>
+</body>
+</html>
