@@ -99,61 +99,63 @@
             }
             
             .navbar a:hover span {
-            transform: scale(1) translateY(0); /* Fixed typo in translateY */ opacity: 1;
+            transform: scale(1) translateY(0); /* Fixed typo in translateY */ opacity: 1;}
             
-            }
             .Talha{
-              width: 1024px;
-              height: 250px;
-              background-image: url(TTY.png);
-              
-              box-shadow: 0 5px 15px rgba(34, 144, 196, 0.3);
-              animation: changeImage 15s linear infinite;
-              position: relative;
-  
+  width: 100%; /* Adjusted width for responsiveness */
+  max-width: 1024px; /* Added max-width to limit width on larger screens */
+  height: 250px;
+  background-image: url(TTY.png);
+  box-shadow: 0 5px 15px rgba(34, 144, 196, 0.3);
+  animation: changeImage 15s linear infinite;
+  position: relative;
   background: transparent;
   border-radius: 15px;
-  border: 2px solid rgba(255,255,255,.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(15px);
-  margin-left: 140px;
+  margin: 0 auto; /* Centering the slider horizontally */
+}
 
+/* Media query for screens smaller than 768px (typical mobile screens) */
+@media (max-width: 767px) {
+  .Talha {
+    height: 150px; /* Adjusted height for mobile */
+  }
+}
 
-            }
+@keyframes changeImage {
+  0% {
+    background-image: url(TTY.png);
+  }
+  20% {
+    background-image: url(TTY.png);
+  }
+  25% {
+    background-image: url(BB.png);
+  }
+  45% {
+    background-image: url(BB.png);
+  }
+  50% {
+    background-image: url(Untitled-1.png);
+  }
+  70% {
+    background-image: url(Untitled-1.png);
+  }
+  75% {
+    background-image: url(Untitled-2.png);
+  }
+  95% {
+    background-image: url(Untitled-2.png);
+  }
+  100% {
+    background-image: url(TTY.png);
+  }
+}
 
-            @keyframes changeImage{
-              0%{
-                background-image: url(TTY.png);
-                align-items: center;
-              }
-              20%{
-                background-image: url(TTY.png);
-                align-items: center;
-              }
-              25%{
-                background-image: url(BB.png);
-              }
-              45%{
-                background-image: url(BB.png);
-              }
-              50%{
-                background-image: url(Untitled-1.png);
-              }
-              70%{
-                background-image: url(Untitled-1.png);
-              }
-              75%{
-                background-image: url(Untitled-2.png);
-              }
-              95%{
-                background-image: url(Untitled-2.png);
-              }
-              100%{
-                background-image: url(TTY.png);
-              }
-            }
             
             </style>
             
