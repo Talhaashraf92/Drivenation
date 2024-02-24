@@ -1,7 +1,6 @@
 # DriveNation
 
-![Project Image](![home](https://github.com/Talhaashraf92/Drivenation/assets/156705234/c21bf38d-f823-4258-88ba-b5a601e57bca))
-)
+![home](https://github.com/Talhaashraf92/Drivenation/assets/156705234/f5ee0384-c72a-47f2-900b-228480b465b8)
 
 ## Description
 
