@@ -21,7 +21,7 @@ This is a car booking website project built using HTML, CSS, and JavaScript. It 
 )
 )
 
-![Screenshot 2](images/tah.png)
+![Screenshot 2](![talh](https://github.com/Talhaashraf92/Drivenation/assets/156705234/8e2dbf05-7afd-4dd6-a54c-ecfa286677dd))
 
 ![Screenshot 3](images/th.png)
 
