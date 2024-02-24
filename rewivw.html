@@ -6,7 +6,6 @@
 <title>Reviews</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-  
 @keyframes glow {
   0% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
   50% { text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF; }
@@ -26,15 +25,17 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  
 }
 
 .card {
   width:100%; /* Adjust width based on the number of cards per row */
-  border-radius: 10px;
+  border-radius: 30px;
   box-shadow: 0 5px 15px rgb(97, 218, 255);
   margin: 20px;
   justify-content: space-between;
   background-color: rgb(116, 118, 119);
+  margin-right: 30px;
 }
 
 .card-content {
@@ -69,6 +70,30 @@ h1 {
 
 .review p {
   line-height: 1.6;
+}
+
+#review-form {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#review-form textarea {
+  width: 70%;
+  height: 100px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #00BFFF;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 </style>
@@ -188,4 +213,27 @@ h1 {
                             
                         </div>
 
-</div></body></html>
+</div>
+<div class="review">
+    <p>
+        "I had a disappointing experience with this website. The car I received had several issues, and the customer service was unresponsive when I tried to address them. I would not recommend this website to others."</p>
+</div>
+</div>
+</div>
+
+<!-- Other reviews -->
+
+</div>
+
+<!-- Review Form -->
+<div id="review-form">
+<h2>Share Your Review</h2>
+<form>
+<textarea name="review" placeholder="Write your review here..." required></textarea><br>
+<button>submit</button>
+</form>
+</div>
+
+</body>
+
+</html>
