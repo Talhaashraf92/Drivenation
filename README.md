@@ -16,15 +16,14 @@ This is a car booking website project built using HTML, CSS, and JavaScript. It 
 
 ## Screenshots
 
-![Dashboard ](![Screenshot 2024-02-24 060202](https://github.com/Talhaashraf92/Drivenation/assets/156705234/5b55a69c-4fd1-4c7d-be7a-4800e6a6cc6a)
-)
-)
+![Dashboard ](https://github.com/Talhaashraf92/Drivenation/assets/156705234/5b55a69c-4fd1-4c7d-be7a-4800e6a6cc6a)
 
-![Screenshot 2](![talh](https://github.com/Talhaashraf92/Drivenation/assets/156705234/8e2dbf05-7afd-4dd6-a54c-ecfa286677dd)
 
-)
+![explore](https://github.com/Talhaashraf92/Drivenation/assets/156705234/8e2dbf05-7afd-4dd6-a54c-ecfa286677dd)
 
-![Screenshot 3](images/th.png)
+
+
+![cars](https://github.com/Talhaashraf92/Drivenation/assets/156705234/275448fe-8120-4589-af09-cec61b743b25)
 
 ## Installation
 
