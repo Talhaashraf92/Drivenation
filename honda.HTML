@@ -6,11 +6,7 @@
 <title>Card Hover Effect</title>
 <link rel="stylesheet" href="tu.css">
 <style>
-@keyframes glow {
-  0% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
-  50% { text-shadow: 0 0 20px #00BFFF, 0 0 30px #00BFFF; }
-  100% { text-shadow: 0 0 10px #00BFFF, 0 0 20px #00BFFF; }
-}
+
 
 h1 {
   text-align: center;
@@ -138,14 +134,65 @@ h1 {
             background-color: #00688b;
         }
 
+/* === removing default button style ===*/
+.tal {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  margin-left: 550px;
+}
+
+/* button styling */
+.tal {
+  --border-right: 6px;
+  --text-stroke-color: rgba(170, 232, 248, 0.849);
+  --animation-color: #f5f9fa;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+/* this is the text, when you hover on button */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+  background-color: #00BFFF;
+}
+/* hover */
+.tal:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color))
+}
 
 
 </style>
 </head>
 <body style="background-color: black;">
 <header>
-<h1><u>(Honda Models)</u></h1>
 
+    <p>.........</p>
+    <button class="tal" data-text="Awesome">
+        <span class="actual-text">&nbsp;Honda&nbsp;</span>
+        <span aria-hidden="true" class="hover-text">&nbsp;Honda&nbsp;</span>
+    </button>
+<p>................</p>
 <div class="container">
     <center>
     <div class="search-container">

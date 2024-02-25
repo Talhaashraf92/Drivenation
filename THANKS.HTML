@@ -10,7 +10,7 @@
             padding: 0;
             font-family: Arial, sans-serif;
             background-color: #000; /* Black background */
-            color: #00FFFF; /* Aqua color for text */
+            color: #e0e2e2; /* Aqua color for text */
         }
         .container {
             width: 80%;
@@ -63,13 +63,40 @@
         }
         .btn:hover {
             background-color: #1ee3f1; /* Dark green color on hover */
+        
+        
+        margin-bottom: 20px;
         }
+        .order-details {
+            margin-bottom: 30px;
+        }
+        .order-details p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .order-number {
+            font-weight: bold;
+        }
+        .car-details {
+            font-style: italic;
+        }
+        .price-details {
+            font-weight: bold;
+            font-size: 24px;
+            color: #71eaff; /* Green color for price */
+        }
+
     </style>
 </head>
 <body>
     <div class="container">
         <div class="message">
             <h1>Your Order is Confirmed!</h1>
+            <div class="order-details">
+                <p><span class="order-number">Order Number:</span> #123456</p>
+                <p><span class="car-details">Car Details:</span> Toyota Camry 2022</p>
+                <p><span class="price-details">Price: $25,000</span></p>
+            </div>
             <p class="thank-you">Thank you for booking your car with us!</p>
             <p style="color: white;">Your car has been reserved successfully and will be delivered to you within one week.</p>
             <p style="color: #fff;">If you have any questions regarding your order, please feel free to contact us at <BR> <br><span class="contact-number">0321 222 6543</span>.</p>

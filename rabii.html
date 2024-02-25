@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Form - Car Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: #000; /* Black background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Aqua shadow */
+        }
+        h1 {
+            text-align: center;
+            color: #4bdbff; /* White color for heading */
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #fff; /* White color for labels */
+        }
+        select {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type="checkbox"] {
+            margin-bottom: 20px;
+        }
+        input[type="date"] {
+            margin-bottom: 20px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        input[type="submit"], .next-btn {
+            background-color: #00b3ff; /* Aqua color for buttons */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+        input[type="submit"]:hover, .next-btn:hover {
+            background-color: #008ac5; /* Darker aqua color on hover */
+        }
+        .next-btn {
+            background-color: #5cc2f1; /* Black color for button */
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Aqua shadow */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Rent Now</h1>
+        <form id="rentForm">
+            <label for="duration">Select Duration:</label>
+            <select name="duration" id="duration">
+                <option value="per_hour">Per Hour ($20)</option>
+                <option value="5_hours">5 Hours ($50)</option>
+                <option value="1_day">1 Day ($85)</option>
+                <option value="1_week">1 Week ($100)</option>
+                <option value="1_month">1 Month ($250)</option>
+            </select>
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            <input type="checkbox" id="weddingOffer" name="weddingOffer">
+            <label for="weddingOffer">Wedding Offer: 5% Discount</label>
+            <input type="submit" value="Calculate Charges">
+        </form>
+        <div class="btn-container">
+            <a href="buy.html" style="text-align: center; " class="next-btn">Rent Now</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('rentForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var duration = document.getElementById('duration').value;
+            var weddingOffer = document.getElementById('weddingOffer').checked;
+            var selectedDate = document.getElementById('date').value;
+
+            var charges;
+            switch(duration) {
+                case 'per_hour':
+                    charges = 20;
+                    break;
+                case '5_hours':
+                    charges = 50;
+                    break;
+                case '1_day':
+                    charges = 85;
+                    break;
+                case '1_week':
+                    charges = 100;
+                    break;
+                case '1_month':
+                    charges = 250;
+                    break;
+            }
+
+            if (weddingOffer) {
+                charges *= 0.95; // Apply 5% discount
+            }
+
+            alert('Total Charges: $' + charges.toFixed(2) + '\nSelected Date: ' + selectedDate);
+        });
+    </script>
+</body>
+</html>
