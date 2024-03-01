@@ -677,40 +677,36 @@
       </style>
 
       <nav class="navbar" data-navbar="">
-        <ul class="navbar-list">
+  <ul class="navbar-list">
+    <li>
+      <a href="#home" class="navbar-link" data-nav-link="">Home</a>
+    </li>
+    <li>
+      <a href="hu.html" class="navbar-link" data-nav-link="">Explore cars</a>
+    </li>
+    <li>
+      <a href="about us.html" class="navbar-link" data-nav-link="">About us</a>
+    </li>
+    <li>
+      <a href="rewivw.html" class="navbar-link" data-nav-link="">Reviews</a>
+    </li>
+    <li>
+      <a href="spareparts.html" class="navbar-link" data-nav-link="">Spare parts</a>
+    </li>
+  </ul>
+</nav>
 
-          <li>
-            <a href="#home" class="navbar-link" data-nav-link="">Home</a>
-          </li>
+<div class="header-actions">
+  <div class="header-contact">
+    <a href="tel:88002345678" class="contact-link">0321 222 5643</a>
+    <span class="contact-time">Mon - sun: 9:00 am - 8:00 pm</span>
+  </div>
+  <!-- Add a toggle button for mobile -->
+  <button class="navbar-toggle" id="navbarToggle">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
 
-
-          <li>
-            <a href="hu.html" class="navbar-link" data-nav-link="">Explore cars</a>
-          </li>
-
-
-          <li>
-            <a href="about us.html" class="navbar-link" data-nav-link="">About us</a>
-          </li>
-
-          <li>
-            <a href="rewivw.html" class="navbar-link" data-nav-link="">Reviews</a>
-          </li>
-          <li>
-            <a href="spareparts.html" class="navbar-link" data-nav-link="">Spare parts</a>
-          </li>
-          <li>
-
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-
-        <div class="header-contact">
-          <a href="tel:88002345678" class="contact-link">0321 222 5643</a>
-
-          <span class="contact-time">Mon - sun: 9:00 am - 8:00 pm</span>
-        </div>
 
         <a href="hu.html" class="btn" aria-labelledby="aria-label-txt">
           <ion-icon name="car-outline" role="img" class="md hydrated" aria-label="car outline"></ion-icon>
@@ -770,9 +766,9 @@
 
                 <div class="nav__dropdown-collapse">
                   <div class="nav__dropdown-content">
-                    <a href="mahad.html" class="nav__dropdown-item">Passwords</a>
-                    <a href="mahad.html" class="nav__dropdown-item">Mail</a>
-                    <a href="mahad.html" class="nav__dropdown-item">Accounts</a>
+                    <a href="signin.html" class="nav__dropdown-item">Passwords</a>
+                    <a href="signin.html" class="nav__dropdown-item">Mail</a>
+                    <a href="signin.html" class="nav__dropdown-item">Accounts</a>
                   </div>
                 </div>
               </div>
@@ -1888,43 +1884,7 @@
 
     
   </script>
-<script>
-  const navbar = document.getElementById('navbar');
 
-// Function to toggle sidebar expansion
-function toggleSidebar() {
-  navbar.classList.toggle('expanded');
-}
-
-// Voice command interaction
-function handleVoiceCommand(command) {
-  if (command === 'open sidebar') {
-    toggleSidebar();
-  } else if (command === 'close sidebar') {
-    if (navbar.classList.contains('expanded')) {
-      toggleSidebar();
-    }
-  }
-}
-
-// Simulated voice command recognition (replace with your actual implementation)
-function recognizeVoiceCommand() {
-  // Simulate voice recognition result
-  const command = prompt('Please speak your command:');
-  handleVoiceCommand(command.toLowerCase());
-}
-
-// Event listener for sidebar toggle button
-navbar.addEventListener('click', toggleSidebar);
-
-// Event listener for voice command simulation (replace with actual implementation)
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'v' && event.ctrlKey) {
-    recognizeVoiceCommand();
-  }
-});
-
-</script>
 
 </body>
 
