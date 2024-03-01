@@ -1,1616 +1,1745 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head style="background-color: black;">
   <!-- Start WOWSlider.com HEAD section -->
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DriveNation</title>
-    
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
-    
-    <link rel="stylesheet" href="tutu.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveNation</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
-  rel="stylesheet">
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <link rel="stylesheet" href="tutu.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&family=Open+Sans&display=swap"
+    rel="stylesheet">
 </head>
+
 <body style="background-color: black;">
-    <div id="app">
+  <div id="app">
 
-        <div id="hero">
-        
-       
-        
-        </div>
-        
-        </div>
-    
-    <header style="background-color: black; color: aliceblue;" class="header" data-header="">
-        <div class="container">
-    
-          <div class="overlay" data-overlay=""></div>
-    
-          <a href="#" class="logo">
-            <img src="WhatsApp Image 2024-02-14 at 00.44.19_0e07bad9.jpg" width="110px">
-          </a>
-          
+    <div id="hero">
 
 
-<!--========== BOX ICONS ==========-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-        <!--========== CSS ==========-->
-        <style>
-            /*========== GOOGLE FONTS ==========*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    </div>
 
-/*========== VARIABLES CSS ==========*/
-:root {
-  --header-height: 3.5rem;
-  --nav-width: 219px;
+  </div>
 
-  /*========== Colors ==========*/
-  --first-color: #33d1f8;
-  --first-color-light: #F4F0FA;
-  --title-color: #19181B;
-  --text-color: #726f77;
-  --text-color-light: #A5A1AA;
-  --body-color: #1e1d1f;
-  --container-color: #141414;
+  <header style="background-color: black; color: aliceblue;" class="header" data-header="">
+    <div class="container">
 
-  /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
-  --normal-font-size: .938rem;
-  --small-font-size: .75rem;
-  --smaller-font-size: .75rem;
+      <div class="overlay" data-overlay=""></div>
 
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
+      <a href="#" class="logo">
+        <img src="WhatsApp Image 2024-02-14 at 00.44.19_0e07bad9.jpg" width="110px">
+      </a>
 
-  /*========== z index ==========*/
-  --z-fixed: 100;
-}
 
-@media screen and (min-width: 1024px) {
-  :root {
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
-}
 
-/*========== BASE ==========*/
-*, ::before, ::after {
-  box-sizing: border-box;
-}
+      <!--========== BOX ICONS ==========-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
 
-body {
-  margin: var(--header-height) 0 0 0;
-  padding: 1rem 1rem 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  
-  color: var(--text-color);
-}
+      <!--========== CSS ==========-->
+      <style>
+        /*========== GOOGLE FONTS ==========*/
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-h3 {
-  margin: 0;
-}
+        /*========== VARIABLES CSS ==========*/
+        :root {
+          --header-height: 3.5rem;
+          --nav-width: 219px;
 
-a {
-  text-decoration: none;
-}
+          /*========== Colors ==========*/
+          --first-color: #33d1f8;
+          --first-color-light: #F4F0FA;
+          --title-color: #19181B;
+          --text-color: #726f77;
+          --text-color-light: #A5A1AA;
+          --body-color: #1e1d1f;
+          --container-color: #141414;
 
-img {
-  max-width: 100%;
-  height: auto;
-}
+          /*========== Font and typography ==========*/
+          --body-font: 'Poppins', sans-serif;
+          --normal-font-size: .938rem;
+          --small-font-size: .75rem;
+          --smaller-font-size: .75rem;
 
-/*========== HEADER ==========*/
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--container-color);
-  box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
-  padding: 0 1rem;
-  z-index: var(--z-fixed);
-}
+          /*========== Font weight ==========*/
+          --font-medium: 500;
+          --font-semi-bold: 600;
 
-.header__container {
-  display: flex;
-  align-items: center;
-  height: var(--header-height);
-  justify-content: space-between;
-}
+          /*========== z index ==========*/
+          --z-fixed: 100;
+        }
 
-.header__img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
+        @media screen and (min-width: 1024px) {
+          :root {
+            --normal-font-size: 1rem;
+            --small-font-size: .875rem;
+            --smaller-font-size: .813rem;
+          }
+        }
 
-.header__logo {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-  display: none;
-}
+        /*========== BASE ==========*/
+        *,
+        ::before,
+        ::after {
+          box-sizing: border-box;
+        }
 
-.header__search {
-  display: flex;
-  padding: .40rem .75rem;
-  background-color: var(--first-color-light);
-  border-radius: .25rem;
-}
+        body {
+          margin: var(--header-height) 0 0 0;
+          padding: 1rem 1rem 0;
+          font-family: var(--body-font);
+          font-size: var(--normal-font-size);
 
-.header__input {
-  width: 100%;
-  border: none;
-  outline: none;
-  background-color: var(--first-color-light);
-}
+          color: var(--text-color);
+        }
 
-.header__input::placeholder {
-  font-family: var(--body-font);
-  color: var(--text-color);
-}
+        h3 {
+          margin: 0;
+        }
 
-.header__icon, 
-.header__toggle {
-  font-size: 1.2rem;
-}
+        a {
+          text-decoration: none;
+        }
 
-.header__toggle {
-  color: var(--title-color);
-  cursor: pointer;
-}
+        img {
+          max-width: 100%;
+          height: auto;
+        }
 
-/*========== NAV ==========*/
-.nav {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  height: 100vh;
-  padding: 1rem 1rem 0;
-  background-color: var(--container-color);
-  box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
-  z-index: var(--z-fixed);
-  transition: .4s;
-}
+        /*========== HEADER ==========*/
+        .header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          background-color: var(--container-color);
+          box-shadow: 0 1px 0 rgba(22, 8, 43, 0.1);
+          padding: 0 1rem;
+          z-index: var(--z-fixed);
+        }
 
-.nav__container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 3rem;
-  overflow: auto;
-  scrollbar-width: none; /* For mozilla */
-}
+        .header__container {
+          display: flex;
+          align-items: center;
+          height: var(--header-height);
+          justify-content: space-between;
+        }
 
-/* For Google Chrome and others */
-.nav__container::-webkit-scrollbar {
-  display: none;
-}
+        .header__img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
 
-.nav__logo {
-  font-weight: var(--font-semi-bold);
-  margin-bottom: 2.5rem;
-}
+        .header__logo {
+          color: var(--title-color);
+          font-weight: var(--font-medium);
+          display: none;
+        }
 
-.nav__list, 
-.nav__items {
-  display: grid;
-}
+        .header__search {
+          display: flex;
+          padding: .40rem .75rem;
+          background-color: var(--first-color-light);
+          border-radius: .25rem;
+        }
 
-.nav__list {
-  row-gap: 2.5rem;
-}
+        .header__input {
+          width: 100%;
+          border: none;
+          outline: none;
+          background-color: var(--first-color-light);
+        }
 
-.nav__items {
-  row-gap: 1.5rem;
-}
+        .header__input::placeholder {
+          font-family: var(--body-font);
+          color: var(--text-color);
+        }
 
-.nav__subtitle {
-  font-size: var(--normal-font-size);
-  text-transform: uppercase;
-  letter-spacing: .1rem;
-  color: var(--text-color-light);
-}
+        .header__icon,
+        .header__toggle {
+          font-size: 1.2rem;
+        }
 
-.nav__link {
-  display: flex;
-  align-items: center;
-  color: var(--text-color);
-}
+        .header__toggle {
+          color: var(--title-color);
+          cursor: pointer;
+        }
 
-.nav__link:hover {
-  color: var(--first-color);
-}
+        /*========== NAV ==========*/
+        .nav {
+          position: fixed;
+          top: 0;
+          left: -100%;
+          height: 100vh;
+          padding: 1rem 1rem 0;
+          background-color: var(--container-color);
+          box-shadow: 1px 0 0 rgba(22, 8, 43, 0.1);
+          z-index: var(--z-fixed);
+          transition: .4s;
+        }
 
-.nav__icon {
-  font-size: 1.2rem;
-  margin-right: .5rem;
-}
+        .nav__container {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-bottom: 3rem;
+          overflow: auto;
+          scrollbar-width: none;
+          /* For mozilla */
+        }
 
-.nav__name {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-  white-space: nowrap;
-}
+        /* For Google Chrome and others */
+        .nav__container::-webkit-scrollbar {
+          display: none;
+        }
 
-.nav__logout {
-  margin-top: 5rem;
-}
+        .nav__logo {
+          font-weight: var(--font-semi-bold);
+          margin-bottom: 2.5rem;
+        }
 
-/* Dropdown */
-.nav__dropdown {
-  overflow: hidden;
-  max-height: 21px;
-  transition: .4s ease-in-out;
-}
+        .nav__list,
+        .nav__items {
+          display: grid;
+        }
 
-.nav__dropdown-collapse {
-  background-color: var(--first-color-light);
-  border-radius: .25rem;
-  margin-top: 1rem;
-}
+        .nav__list {
+          row-gap: 2.5rem;
+        }
 
-.nav__dropdown-content {
-  display: grid;
-  row-gap: .5rem;
-  padding: .75rem 2.5rem .75rem 1.8rem;
-}
+        .nav__items {
+          row-gap: 1.5rem;
+        }
 
-.nav__dropdown-item {
-  font-size: var(--smaller-font-size);
-  font-weight: var(--font-medium);
-  color: var(--text-color);
-}
+        .nav__subtitle {
+          font-size: var(--normal-font-size);
+          text-transform: uppercase;
+          letter-spacing: .1rem;
+          color: var(--text-color-light);
+        }
 
-.nav__dropdown-item:hover {
-  color: var(--first-color);
-}
+        .nav__link {
+          display: flex;
+          align-items: center;
+          color: var(--text-color);
+        }
 
-.nav__dropdown-icon {
-  margin-left: auto;
-  transition: .4s;
-}
+        .nav__link:hover {
+          color: var(--first-color);
+        }
 
-/* Show dropdown collapse */
-.nav__dropdown:hover {
-  max-height: 100rem;
-}
+        .nav__icon {
+          font-size: 1.2rem;
+          margin-right: .5rem;
+        }
 
-/* Rotate icon arrow */
-.nav__dropdown:hover .nav__dropdown-icon {
-  transform: rotate(180deg);
-}
+        .nav__name {
+          font-size: var(--small-font-size);
+          font-weight: var(--font-medium);
+          white-space: nowrap;
+        }
 
-/*===== Show menu =====*/
-.show-menu {
-  left: 0;
-}
+        .nav__logout {
+          margin-top: 5rem;
+        }
 
-/*===== Active link =====*/
-.active {
-  color: var(--first-color);
-}
+        /* Dropdown */
+        .nav__dropdown {
+          overflow: hidden;
+          max-height: 21px;
+          transition: .4s ease-in-out;
+        }
 
-/* ========== MEDIA QUERIES ==========*/
-/* For small devices reduce search*/
-@media screen and (max-width: 320px) {
-  .header__search {
-    width: 70%;
-  }
-}
+        .nav__dropdown-collapse {
+          background-color: var(--first-color-light);
+          border-radius: .25rem;
+          margin-top: 1rem;
+        }
 
-@media screen and (min-width: 768px) {
-  body {
-    padding: 1rem 3rem 0 6rem;
-  }
-  .header {
-    padding: 0 3rem 0 6rem;
-  }
-  .header__container {
-    height: calc(var(--header-height) + .5rem);
-  }
-  .header__search {
-    width: 300px;
-    padding: .55rem .75rem;
-  }
-  .header__toggle {
-    display: none;
-  }
-  .header__logo {
-    display: block;
-  }
-  .header__img {
-    width: 40px;
-    height: 40px;
-    order: 1;
-  }
-  .nav {
-    left: 0;
-    padding: 1.2rem 1.5rem 0;
-    width: 68px; /* Reduced navbar */
-  }
-  .nav__items {
-    row-gap: 1.7rem;
-  }
-  .nav__icon {
-    font-size: 1.3rem;
-  }
+        .nav__dropdown-content {
+          display: grid;
+          row-gap: .5rem;
+          padding: .75rem 2.5rem .75rem 1.8rem;
+        }
 
-  /* Element opacity */
-  .nav__logo-name, 
-  .nav__name, 
-  .nav__subtitle, 
-  .nav__dropdown-icon {
-    opacity: 0;
-    transition: .3s;
-  }
-  
-  
-  /* Navbar expanded */
-  .nav:hover {
-    width: var(--nav-width);
-  }
-  
-  /* Visible elements */
-  .nav:hover .nav__logo-name {
-    opacity: 1;
-  }
-  .nav:hover .nav__subtitle {
-    opacity: 1;
-  }
-  .nav:hover .nav__name {
-    opacity: 1;
-  }
-  .nav:hover .nav__dropdown-icon {
-    opacity: 1;
-  }
-}
-    
-            #wowslider-container1{
-              
-              box-shadow: #00fffb;
-              border-radius: 20px;
-            }
-         
-            .navbar {
-            
-            position: relative;
-            
-            font-size: 1.1em;
-            
-            font-weight: 500;
-            
-            color: #333;
-            
-            text-decoration: none;
-            padding: 6px 20px;
-            
-            transition: 0.5s;
-            
-            }
-            
-            .navbar a:hover {
-            
-            color: #8ef;
-            
-            }
-            
-            .navbar a span {
-            
-            position: absolute;
-            
-            top: 0;
-            
+        .nav__dropdown-item {
+          font-size: var(--smaller-font-size);
+          font-weight: var(--font-medium);
+          color: var(--text-color);
+        }
+
+        .nav__dropdown-item:hover {
+          color: var(--first-color);
+        }
+
+        .nav__dropdown-icon {
+          margin-left: auto;
+          transition: .4s;
+        }
+
+        /* Show dropdown collapse */
+        .nav__dropdown:hover {
+          max-height: 100rem;
+        }
+
+        /* Rotate icon arrow */
+        .nav__dropdown:hover .nav__dropdown-icon {
+          transform: rotate(180deg);
+        }
+
+        /*===== Show menu =====*/
+        .show-menu {
+          left: 0;
+        }
+
+        /*===== Active link =====*/
+        .active {
+          color: var(--first-color);
+        }
+
+        /* ========== MEDIA QUERIES ==========*/
+        /* For small devices reduce search*/
+        @media screen and (max-width: 320px) {
+          .header__search {
+            width: 70%;
+          }
+        }
+
+        @media screen and (min-width: 768px) {
+          body {
+            padding: 1rem 3rem 0 6rem;
+          }
+
+          .header {
+            padding: 0 3rem 0 6rem;
+          }
+
+          .header__container {
+            height: calc(var(--header-height) + .5rem);
+          }
+
+          .header__search {
+            width: 300px;
+            padding: .55rem .75rem;
+          }
+
+          .header__toggle {
+            display: none;
+          }
+
+          .header__logo {
+            display: block;
+          }
+
+          .header__img {
+            width: 40px;
+            height: 40px;
+            order: 1;
+          }
+
+          .nav {
             left: 0;
-            
-            width: 100%;
-            
-            height: 100%;
-            
-            z-index: -1;
-            
-            border-bottom: 2px solid #bef;
-            
-            border-radius: 15px;
-            
-            transform: scale(0) translateY(50px); /*
+            padding: 1.2rem 1.5rem 0;
+            width: 68px;
+            /* Reduced navbar */
+          }
+
+          .nav__items {
+            row-gap: 1.7rem;
+          }
+
+          .nav__icon {
+            font-size: 1.3rem;
+          }
+
+          /* Element opacity */
+          .nav__logo-name,
+          .nav__name,
+          .nav__subtitle,
+          .nav__dropdown-icon {
+            opacity: 0;
+            transition: .3s;
+          }
+
+
+          /* Navbar expanded */
+          .nav:hover {
+            width: var(--nav-width);
+          }
+
+          /* Visible elements */
+          .nav:hover .nav__logo-name {
+            opacity: 1;
+          }
+
+          .nav:hover .nav__subtitle {
+            opacity: 1;
+          }
+
+          .nav:hover .nav__name {
+            opacity: 1;
+          }
+
+          .nav:hover .nav__dropdown-icon {
+            opacity: 1;
+          }
+        }
+
+        #wowslider-container1 {
+
+          box-shadow: #00fffb;
+          border-radius: 20px;
+        }
+
+        .navbar {
+
+          position: relative;
+
+          font-size: 1.1em;
+
+          font-weight: 500;
+
+          color: #333;
+
+          text-decoration: none;
+          padding: 6px 20px;
+
+          transition: 0.5s;
+
+        }
+
+        .navbar a:hover {
+
+          color: #8ef;
+
+        }
+
+        .navbar a span {
+
+          position: absolute;
+
+          top: 0;
+
+          left: 0;
+
+          width: 100%;
+
+          height: 100%;
+
+          z-index: -1;
+
+          border-bottom: 2px solid #bef;
+
+          border-radius: 15px;
+
+          transform: scale(0) translateY(50px);
+          /*
             
             Fixed typo in translateY */
-            
-            opacity: 0;
-            
-            transition: 0.5s;
-            
-            }
-            
-            .navbar a:hover span {
-            transform: scale(1) translateY(0); /* Fixed typo in translateY */ opacity: 1;}
-            
-            .Talha{
-  width: 100%; /* Adjusted width for responsiveness */
-  max-width: 1024px; /* Added max-width to limit width on larger screens */
-  height: 250px;
-  background-image: url(TTY.png);
-  box-shadow: 0 5px 15px rgba(34, 144, 196, 0.3);
-  animation: changeImage 15s linear infinite;
-  position: relative;
-  background: transparent;
-  border-radius: 15px;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(15px);
-  margin: 0 auto; /* Centering the slider horizontally */
-}
 
-/* Media query for screens smaller than 768px (typical mobile screens) */
-@media (max-width: 767px) {
-  .Talha {
-    height: 150px; /* Adjusted height for mobile */
-  }
-}
+          opacity: 0;
 
-@keyframes changeImage {
-  0% {
-    background-image: url(TTY.png);
-  }
-  20% {
-    background-image: url(TTY.png);
-  }
-  25% {
-    background-image: url(BB.png);
-  }
-  45% {
-    background-image: url(BB.png);
-  }
-  50% {
-    background-image: url(Untitled-1.png);
-  }
-  70% {
-    background-image: url(Untitled-1.png);
-  }
-  75% {
-    background-image: url(Untitled-2.png);
-  }
-  95% {
-    background-image: url(Untitled-2.png);
-  }
-  100% {
-    background-image: url(TTY.png);
-  }
-}
+          transition: 0.5s;
 
-            
-            </style>
-            
-          <nav class="navbar" data-navbar="">
-            <ul class="navbar-list">
-    
-              <li>
-                <a href="#home" class="navbar-link" data-nav-link="">Home</a>
-              </li>
+        }
 
-    
-              <li>
-                <a href="hu.html" class="navbar-link" data-nav-link="">Explore cars</a>
-              </li>
-              
-    
-              <li>
-                <a href="about us.html" class="navbar-link" data-nav-link="">About us</a>
-              </li>
-    
-              <li>
-                <a href="rewivw.html" class="navbar-link" data-nav-link="">Reviews</a>
-              </li>
-              <li>
-                <a href="spareparts.html" class="navbar-link" data-nav-link="">Spare parts</a>
-              </li>
-              <li>
-                
-            </ul>
-          </nav>
-    
-          <div class="header-actions">
+        .navbar a:hover span {
+          transform: scale(1) translateY(0);
+          /* Fixed typo in translateY */
+          opacity: 1;
+        }
 
-            <div class="header-contact">
-              <a href="tel:88002345678" class="contact-link">0321 222 5643</a>
-    
-              <span class="contact-time">Mon - sun: 9:00 am - 8:00 pm</span>
-            </div>
-    
-            <a href="hu.html" class="btn" aria-labelledby="aria-label-txt">
-             <ion-icon name="car-outline" role="img" class="md hydrated" aria-label="car outline" ></ion-icon>
-    
-              <span id="aria-label-txt">Explore cars</span>
-            </a>
-    
-            <a href="mahad.html" class="btn user-btn" aria-label="Profile">
-              <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
-            </a>
-    
-            <button class="nav-toggle-btn" data-nav-toggle-btn="" aria-label="Toggle Menu">
-              <span class="one"></span>
-              <span class="two"></span>
-              <span class="three"></span>
-            </button>
-    
-          </div>
-    
+        .Talha {
+          width: 100%;
+          /* Adjusted width for responsiveness */
+          max-width: 1024px;
+          /* Added max-width to limit width on larger screens */
+          height: 250px;
+          background-image: url(TTY.png);
+          box-shadow: 0 5px 15px rgba(34, 144, 196, 0.3);
+          animation: changeImage 15s linear infinite;
+          position: relative;
+          background: transparent;
+          border-radius: 15px;
+          border: 2px solid rgba(255, 255, 255, 0.5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          backdrop-filter: blur(15px);
+          margin: 0 auto;
+          /* Centering the slider horizontally */
+        }
+
+        /* Media query for screens smaller than 768px (typical mobile screens) */
+        @media (max-width: 767px) {
+          .Talha {
+            height: 150px;
+            /* Adjusted height for mobile */
+          }
+        }
+
+        @keyframes changeImage {
+          0% {
+            background-image: url(TTY.png);
+          }
+
+          20% {
+            background-image: url(TTY.png);
+          }
+
+          25% {
+            background-image: url(BB.png);
+          }
+
+          45% {
+            background-image: url(BB.png);
+          }
+
+          50% {
+            background-image: url(Untitled-1.png);
+          }
+
+          70% {
+            background-image: url(Untitled-1.png);
+          }
+
+          75% {
+            background-image: url(Untitled-2.png);
+          }
+
+          95% {
+            background-image: url(Untitled-2.png);
+          }
+
+          100% {
+            background-image: url(TTY.png);
+          }
+        }
+      </style>
+
+      <nav class="navbar" data-navbar="">
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link" data-nav-link="">Home</a>
+          </li>
+
+
+          <li>
+            <a href="hu.html" class="navbar-link" data-nav-link="">Explore cars</a>
+          </li>
+
+
+          <li>
+            <a href="about us.html" class="navbar-link" data-nav-link="">About us</a>
+          </li>
+
+          <li>
+            <a href="rewivw.html" class="navbar-link" data-nav-link="">Reviews</a>
+          </li>
+          <li>
+            <a href="spareparts.html" class="navbar-link" data-nav-link="">Spare parts</a>
+          </li>
+          <li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+
+        <div class="header-contact">
+          <a href="tel:88002345678" class="contact-link">0321 222 5643</a>
+
+          <span class="contact-time">Mon - sun: 9:00 am - 8:00 pm</span>
         </div>
-      </header>
-      <body>
 
-        <!-- 
-          - #HEADER
-        -->
-      
-        
-        <!--========== NAV ==========-->
-        <div class="nav" id="navbar">
-          <nav class="nav__container">
-              <div>
-                  <a href="#" class="nav__link nav__logo">
-                      <i class='bx bxs-disc nav__icon' ></i>
-                      <span class="nav__logo-name">DriveNation</span>
-                  </a>
-  
-                  <div class="nav__list">
-                      <div class="nav__items">
-                          <h3 class="nav__subtitle">Profile</h3>
-  
-                          <a href="#" class="nav__link active">
-                              <i class='bx bx-home nav__icon' ></i>
-                              <span class="nav__name">Home</span>
-                          </a>
-                           <a href="dashboard.html" class="nav__link active-link">
-                        <i class='bx bx-grid-alt'></i>
-                        <span class="nav__name">Dashboard</span>
-                    </a>
-                          <div class="nav__dropdown">
-                              <a href="mahad.html" class="nav__link">
-                                  <i class='bx bx-user nav__icon' ></i>
-                                  <span class="nav__name">Profile</span>
-                                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                              </a>
+        <a href="hu.html" class="btn" aria-labelledby="aria-label-txt">
+          <ion-icon name="car-outline" role="img" class="md hydrated" aria-label="car outline"></ion-icon>
 
-                              <div class="nav__dropdown-collapse">
-                                  <div class="nav__dropdown-content">
-                                      <a href="mahad.html" class="nav__dropdown-item">Passwords</a>
-                                      <a href="mahad.html" class="nav__dropdown-item">Mail</a>
-                                      <a href="mahad.html" class="nav__dropdown-item">Accounts</a>
-                                  </div>
-                              </div>
-                          </div>
+          <span id="aria-label-txt">Explore cars</span>
+        </a>
 
-                          <a href="#" class="nav__link">
-                              <i class='bx bx-message-rounded nav__icon' ></i>
-                              <span class="nav__name">Messages</span>
-                          </a>
-                      </div>
-  
-                      <div class="nav__items">
-                          <h3 class="nav__subtitle">Menu</h3>
-  
-                          <div class="nav__dropdown">
-                              <a href="#" class="nav__link">
-                                  <i class='bx bx-bell nav__icon' ></i>
-                                  <span class="nav__name">Notifications</span>
-                                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                              </a>
+        <a href="signin.html" class="btn user-btn" aria-label="Profile">
+          <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
+        </a>
 
-                              <div class="nav__dropdown-collapse">
-                                  <div class="nav__dropdown-content">
-                                      <a href="#" class="nav__dropdown-item">Blocked</a>
-                                      <a href="#" class="nav__dropdown-item">Silenced</a>
-                                      <a href="#" class="nav__dropdown-item">Publish</a>
-                                      <a href="#" class="nav__dropdown-item">Program</a>
-                                  </div>
-                              </div>
+        <button class="nav-toggle-btn" data-nav-toggle-btn="" aria-label="Toggle Menu">
+          <span class="one"></span>
+          <span class="two"></span>
+          <span class="three"></span>
+        </button>
 
-                          </div>
-
-                          <a href="hu.html" class="nav__link">
-                              <i class='bx bx-compass nav__icon' ></i>
-                              <span class="nav__name">Explore</span>
-                          </a>
-                          <a href="#" class="nav__link">
-                              <i class='bx bx-bookmark nav__icon' ></i>
-                              <span class="nav__name">Saved</span>
-                          </a>
-                      </div>
-                  </div>
-              </div>
-
-              <a href="#" class="nav__link nav__logout">
-                  <i class='bx bx-log-out nav__icon' ></i>
-                  <span class="nav__name">Log Out</span>
-              </a>
-          </nav>
       </div>
 
-      
-      
-      
-        <main>
-          <article>
-      
-            <!-- 
+    </div>
+  </header>
+
+  <body>
+
+    <!-- 
+          - #HEADER
+        -->
+
+
+    <!--========== NAV ==========-->
+    <div class="nav" id="navbar">
+      <nav class="nav__container">
+        <div>
+          <a href="#" class="nav__link nav__logo">
+            <i class='bx bxs-disc nav__icon'></i>
+            <span class="nav__logo-name">DriveNation</span>
+          </a>
+
+          <div class="nav__list">
+            <div class="nav__items">
+              <h3 class="nav__subtitle">Profile</h3>
+
+              <a href="#" class="nav__link active">
+                <i class='bx bx-home nav__icon'></i>
+                <span class="nav__name">Home</span>
+              </a>
+              <a href="dashboard.html" class="nav__link active-link">
+                <i class='bx bx-grid-alt'></i>
+                <span class="nav__name">Dashboard</span>
+              </a>
+              <div class="nav__dropdown">
+                <a href="signin.html" class="nav__link">
+                  <i class='bx bx-user nav__icon'></i>
+                  <span class="nav__name">Profile</span>
+                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                </a>
+
+                <div class="nav__dropdown-collapse">
+                  <div class="nav__dropdown-content">
+                    <a href="mahad.html" class="nav__dropdown-item">Passwords</a>
+                    <a href="mahad.html" class="nav__dropdown-item">Mail</a>
+                    <a href="mahad.html" class="nav__dropdown-item">Accounts</a>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#" class="nav__link">
+                <i class='bx bx-message-rounded nav__icon'></i>
+                <span class="nav__name">Messages</span>
+              </a>
+            </div>
+
+            <div class="nav__items">
+              <h3 class="nav__subtitle">Menu</h3>
+
+              <div class="nav__dropdown">
+                <a href="#" class="nav__link">
+                  <i class='bx bx-bell nav__icon'></i>
+                  <span class="nav__name">Notifications</span>
+                  <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                </a>
+
+                <div class="nav__dropdown-collapse">
+                  <div class="nav__dropdown-content">
+                    <a href="#" class="nav__dropdown-item">Blocked</a>
+                    <a href="#" class="nav__dropdown-item">Silenced</a>
+                    <a href="#" class="nav__dropdown-item">Publish</a>
+                    <a href="#" class="nav__dropdown-item">Program</a>
+                  </div>
+                </div>
+
+              </div>
+
+              <a href="hu.html" class="nav__link">
+                <i class='bx bx-compass nav__icon'></i>
+                <span class="nav__name">Explore</span>
+              </a>
+              <a href="#" class="nav__link">
+                <i class='bx bx-bookmark nav__icon'></i>
+                <span class="nav__name">Saved</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" type="button" id="signoutbutton" class="nav__link nav__logout">
+          <i class='bx bx-log-out nav__icon'></i>
+          <span class="nav__name">Sign Out</span>
+        </a>
+      </nav>
+
+      <h2 id="msg"></h2>
+      <h2 id="greet"></h2>
+    </div>
+
+
+
+
+    <main>
+      <article>
+
+        <!-- 
               - #HERO
             -->
-      
-            <section class="section hero" id="home">
-                
-              <div class="container">
-      
-                <div class="hero-content">
-                   
-                  <h2 class="h1 hero-title">Welcome to the DriveNation <br> Find Your Perfect Match Here</h2>
-      
-                  <p class="hero-text" style="color: rgb(175, 171, 165);">
-                    Discover Your Dream Ride: Explore Our Stunning Selection!
-                  </p>
-                </div>
-      
-                <div class="hero-banner"></div>
-      
-                <form style="border-color: bisque;" action="" class="hero-form">
-      
-                  <div class="input-wrapper">
-                    <label for="input-1" class="input-label" style="color: rgb(37, 179, 214);border-color: antiquewhite;">Car, model, or brand</label>
-      
-                    <input type="text" name="car-model" id="input-1" class="input-field" placeholder="What car are you looking?">
-                  </div>
-      
-                  <div class="input-wrapper">
-                    <label for="input-2" class="input-label" style="color: rgb(37, 179, 214) ;">Max. monthly payment</label>
-      
-                    <input type="text" name="monthly-pay" id="input-2" class="input-field" placeholder="Add an amount in $">
-                  </div>
-      
-                  <div class="input-wrapper">
-                    <label for="input-3" class="input-label" style="color: rgb(37, 179, 214)">Make Year</label>
-      
-                    <input type="text" name="year" id="input-3" class="input-field" placeholder="Add a minimal make year">
-                  </div>
-      
-                  <button type="submit" class="btn" style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Search</button>
-      
-                </form>
-      
+
+        <section class="section hero" id="home">
+
+          <div class="container">
+
+            <div class="hero-content">
+
+              <h2 class="h1 hero-title">Welcome to the DriveNation <br> Find Your Perfect Match Here</h2>
+
+              <p class="hero-text" style="color: rgb(175, 171, 165);">
+                Discover Your Dream Ride: Explore Our Stunning Selection!
+              </p>
+            </div>
+
+            <div class="hero-banner"></div>
+
+            <form style="border-color: bisque;" action="" class="hero-form">
+
+              <div class="input-wrapper">
+                <label for="input-1" class="input-label"
+                  style="color: rgb(37, 179, 214);border-color: antiquewhite;">Car, model, or brand</label>
+
+                <input type="text" name="car-model" id="input-1" class="input-field"
+                  placeholder="What car are you looking?">
               </div>
-            </section>
-            <section">
-              <div class="Talha">
-  
+
+              <div class="input-wrapper">
+                <label for="input-2" class="input-label" style="color: rgb(37, 179, 214) ;">Max. monthly payment</label>
+
+                <input type="text" name="monthly-pay" id="input-2" class="input-field" placeholder="Add an amount in $">
               </div>
-            </section>
-      
-            
-            <!-- 
+
+              <div class="input-wrapper">
+                <label for="input-3" class="input-label" style="color: rgb(37, 179, 214)">Make Year</label>
+
+                <input type="text" name="year" id="input-3" class="input-field" placeholder="Add a minimal make year">
+              </div>
+
+              <button type="submit" class="btn"
+                style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Search</button>
+
+            </form>
+
+          </div>
+        </section>
+        <section">
+          <div class="Talha">
+
+          </div>
+          </section>
+
+
+          <!-- 
               - #FEATURED CAR
             -->
-      
-            <section class="section featured-car" id="featured-car">
-              <div class="container">
-      
-                <div class="title-wrapper">
-                  <h2 class="h2 section-title" style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Featured cars</h2>
-      
-                  <a href="buy.html" class="featured-car-link">
-                    <span>View more</span>
-      
-                    <ion-icon name="arrow-forward-outline" role="img" class="md hydrated" aria-label="arrow forward outline"></ion-icon>
-                  </a>
-                </div>
-      
-                <ul class="featured-car-list">
-      
-                  <li>
-                    <div class="featured-car-card">
-      
-                      <figure class="card-banner">
-                        <img src="car-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="440" height="300" class="w-100">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <div class="card-title-wrapper">
-                          <h3 class="h3 card-title">
-                            <a href="hu.html">Toyota RAV4</a>
-                          </h3>
-      
-                          <data class="year" value="2021">2021</data>
-                        </div>
-      
-                        <ul class="card-list">
-      
-                          <li class="card-list-item">
-                            <ion-icon name="people-outline" role="img" class="md hydrated" aria-label="people outline"></ion-icon>
-      
-                            <span class="card-item-text">4 People</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="flash-outline" role="img" class="md hydrated" aria-label="flash outline"></ion-icon>
-      
-                            <span class="card-item-text">Hybrid</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
-      
-                            <span class="card-item-text">6.1km / 1-litre</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="hardware-chip-outline" role="img" class="md hydrated" aria-label="hardware chip outline"></ion-icon>
-      
-                            <span class="card-item-text">Automatic</span>
-                          </li>
-      
-                        </ul>
-      
-                        <div class="card-price-wrapper">
-      
-                          <p class="card-price">
-                            <strong>$440</strong> / month
-                          </p>
-      
-                          <button class="btn fav-btn" aria-label="Add to favourite list">
-                            <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                          </button>
-      
-                          <a href="rabii.html"><button class="btn">Rent now</button></a>
-      
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="featured-car-card">
-      
-                      <figure class="card-banner">
-                        <img src="car-2.jpg" alt="BMW 3 Series 2019" loading="lazy" width="440" height="300" class="w-100">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <div class="card-title-wrapper">
-                          <h3 class="h3 card-title">
-                            <a href="hu.html">BMW 3 Series</a>
-                          </h3>
-      
-                          <data class="year" value="2019">2019</data>
-                        </div>
-      
-                        <ul class="card-list">
-      
-                          <li class="card-list-item">
-                            <ion-icon name="people-outline" role="img" class="md hydrated" aria-label="people outline"></ion-icon>
-      
-                            <span class="card-item-text">4 People</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="flash-outline" role="img" class="md hydrated" aria-label="flash outline"></ion-icon>
-      
-                            <span class="card-item-text">Gasoline</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
-      
-                            <span class="card-item-text">8.2km / 1-litre</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="hardware-chip-outline" role="img" class="md hydrated" aria-label="hardware chip outline"></ion-icon>
-      
-                            <span class="card-item-text">Automatic</span>
-                          </li>
-      
-                        </ul>
-      
-                        <div class="card-price-wrapper">
-      
-                          <p class="card-price">
-                            <strong>$350</strong> / month
-                          </p>
-      
-                          <button class="btn fav-btn" aria-label="Add to favourite list">
-                            <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                          </button>
-      
-                         <A href="rabii.html"> <button class="btn">Rent now</button></A>
-      
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="featured-car-card">
-      
-                      <figure class="card-banner">
-                        <img src="car-3.jpg" alt="Volkswagen T-Cross 2020" loading="lazy" width="440" height="300" class="w-100">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <div class="card-title-wrapper">
-                          <h3 class="h3 card-title">
-                            <a href="hu.html">Volkswagen T-Cross</a>
-                          </h3>
-      
-                          <data class="year" value="2020">2020</data>
-                        </div>
-      
-                        <ul class="card-list">
-      
-                          <li class="card-list-item">
-                            <ion-icon name="people-outline" role="img" class="md hydrated" aria-label="people outline"></ion-icon>
-      
-                            <span class="card-item-text">4 People</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="flash-outline" role="img" class="md hydrated" aria-label="flash outline"></ion-icon>
-      
-                            <span class="card-item-text">Gasoline</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
-      
-                            <span class="card-item-text">5.3km / 1-litre</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="hardware-chip-outline" role="img" class="md hydrated" aria-label="hardware chip outline"></ion-icon>
-      
-                            <span class="card-item-text">Automatic</span>
-                          </li>
-      
-                        </ul>
-      
-                        <div class="card-price-wrapper">
-      
-                          <p class="card-price">
-                            <strong>$400</strong> / month
-                          </p>
-      
-                          <button class="btn fav-btn" aria-label="Add to favourite list">
-                            <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                          </button>
-      
-                          <A href="rabii.html"> <button class="btn">Rent now</button></A>
-      
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="featured-car-card">
-      
-                      <figure class="card-banner">
-                        <img src="car-4.jpg" alt="Cadillac Escalade 2020" loading="lazy" width="440" height="300" class="w-100">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <div class="card-title-wrapper">
-                          <h3 class="h3 card-title">
-                            <a href="hu.html">Cadillac Escalade</a>
-                          </h3>
-      
-                          <data class="year" value="2020">2020</data>
-                        </div>
-      
-                        <ul class="card-list">
-      
-                          <li class="card-list-item">
-                            <ion-icon name="people-outline" role="img" class="md hydrated" aria-label="people outline"></ion-icon>
-      
-                            <span class="card-item-text">4 People</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="flash-outline" role="img" class="md hydrated" aria-label="flash outline"></ion-icon>
-      
-                            <span class="card-item-text">Gasoline</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
-      
-                            <span class="card-item-text">7.7km / 1-litre</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="hardware-chip-outline" role="img" class="md hydrated" aria-label="hardware chip outline"></ion-icon>
-      
-                            <span class="card-item-text">Automatic</span>
-                          </li>
-      
-                        </ul>
-      
-                        <div class="card-price-wrapper">
-      
-                          <p class="card-price">
-                            <strong>$620</strong> / month
-                          </p>
-      
-                          <button class="btn fav-btn" aria-label="Add to favourite list">
-                            <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                          </button>
-      
-                          <A href="rabii.html"> <button class="btn">Rent now</button></A>
-      
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="featured-car-card">
-      
-                      <figure class="card-banner">
-                        <img src="car-5.jpg" alt="BMW 4 Series GTI 2021" loading="lazy" width="440" height="300" class="w-100">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <div class="card-title-wrapper">
-                          <h3 class="h3 card-title">
-                            <a href="hu.html">BMW 4 Series GTI</a>
-                          </h3>
-      
-                          <data class="year" value="2021">2021</data>
-                        </div>
-      
-                        <ul class="card-list">
-      
-                          <li class="card-list-item">
-                            <ion-icon name="people-outline" role="img" class="md hydrated" aria-label="people outline"></ion-icon>
-      
-                            <span class="card-item-text">4 People</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="flash-outline" role="img" class="md hydrated" aria-label="flash outline"></ion-icon>
-      
-                            <span class="card-item-text">Gasoline</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
-      
-                            <span class="card-item-text">7.6km / 1-litre</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="hardware-chip-outline" role="img" class="md hydrated" aria-label="hardware chip outline"></ion-icon>
-      
-                            <span class="card-item-text">Automatic</span>
-                          </li>
-      
-                        </ul>
-      
-                        <div class="card-price-wrapper">
-      
-                          <p class="card-price">
-                            <strong>$530</strong> / month
-                          </p>
-      
-                          <button class="btn fav-btn" aria-label="Add to favourite list">
-                            <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                          </button>
-      
-                          <A href="rabii.html"> <button class="btn">Rent now</button></A>
-      
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="featured-car-card">
-      
-                      <figure class="card-banner">
-                        <img src="car-6.jpg" alt="BMW 4 Series 2019" loading="lazy" width="440" height="300" class="w-100">
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <div class="card-title-wrapper">
-                          <h3 class="h3 card-title">
-                            <a href="hu.html">BMW 4 Series</a>
-                          </h3>
-      
-                          <data class="year" value="2019">2019</data>
-                        </div>
-      
-                        <ul class="card-list">
-      
-                          <li class="card-list-item">
-                            <ion-icon name="people-outline" role="img" class="md hydrated" aria-label="people outline"></ion-icon>
-      
-                            <span class="card-item-text">4 People</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="flash-outline" role="img" class="md hydrated" aria-label="flash outline"></ion-icon>
-      
-                            <span class="card-item-text">Gasoline</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="speedometer-outline" role="img" class="md hydrated" aria-label="speedometer outline"></ion-icon>
-      
-                            <span class="card-item-text">7.2km / 1-litre</span>
-                          </li>
-      
-                          <li class="card-list-item">
-                            <ion-icon name="hardware-chip-outline" role="img" class="md hydrated" aria-label="hardware chip outline"></ion-icon>
-      
-                            <span class="card-item-text">Automatic</span>
-                          </li>
-      
-                        </ul>
-      
-                        <div class="card-price-wrapper">
-      
-                          <p class="card-price">
-                            <strong>$490</strong> / month
-                          </p>
-      
-                          <button class="btn fav-btn" aria-label="Add to favourite list">
-                            <ion-icon name="heart-outline" role="img" class="md hydrated" aria-label="heart outline"></ion-icon>
-                          </button>
-      
-                          <A href="rabii.html"> <button class="btn">Rent now</button></A>
-      
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                </ul>
-      
+
+          <section class="section featured-car" id="featured-car">
+            <div class="container">
+
+              <div class="title-wrapper">
+                <h2 class="h2 section-title"
+                  style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Featured cars</h2>
+
+                <a href="buy.html" class="featured-car-link">
+                  <span>View more</span>
+
+                  <ion-icon name="arrow-forward-outline" role="img" class="md hydrated"
+                    aria-label="arrow forward outline"></ion-icon>
+                </a>
               </div>
-            </section>
-      
-      
-      
-      
-      
-            <!-- 
+
+              <ul class="featured-car-list">
+
+                <li>
+                  <div class="featured-car-card">
+
+                    <figure class="card-banner">
+                      <img src="car-1.jpg" alt="Toyota RAV4 2021" loading="lazy" width="440" height="300" class="w-100">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <div class="card-title-wrapper">
+                        <h3 class="h3 card-title">
+                          <a href="hu.html">Toyota RAV4</a>
+                        </h3>
+
+                        <data class="year" value="2021">2021</data>
+                      </div>
+
+                      <ul class="card-list">
+
+                        <li class="card-list-item">
+                          <ion-icon name="people-outline" role="img" class="md hydrated"
+                            aria-label="people outline"></ion-icon>
+
+                          <span class="card-item-text">4 People</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="flash-outline" role="img" class="md hydrated"
+                            aria-label="flash outline"></ion-icon>
+
+                          <span class="card-item-text">Hybrid</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="speedometer-outline" role="img" class="md hydrated"
+                            aria-label="speedometer outline"></ion-icon>
+
+                          <span class="card-item-text">6.1km / 1-litre</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="hardware-chip-outline" role="img" class="md hydrated"
+                            aria-label="hardware chip outline"></ion-icon>
+
+                          <span class="card-item-text">Automatic</span>
+                        </li>
+
+                      </ul>
+
+                      <div class="card-price-wrapper">
+
+                        <p class="card-price">
+                          <strong>$440</strong> / month
+                        </p>
+
+                        <button class="btn fav-btn" aria-label="Add to favourite list">
+                          <ion-icon name="heart-outline" role="img" class="md hydrated"
+                            aria-label="heart outline"></ion-icon>
+                        </button>
+
+                        <a href="rabii.html"><button class="btn">Rent now</button></a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="featured-car-card">
+
+                    <figure class="card-banner">
+                      <img src="car-2.jpg" alt="BMW 3 Series 2019" loading="lazy" width="440" height="300"
+                        class="w-100">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <div class="card-title-wrapper">
+                        <h3 class="h3 card-title">
+                          <a href="hu.html">BMW 3 Series</a>
+                        </h3>
+
+                        <data class="year" value="2019">2019</data>
+                      </div>
+
+                      <ul class="card-list">
+
+                        <li class="card-list-item">
+                          <ion-icon name="people-outline" role="img" class="md hydrated"
+                            aria-label="people outline"></ion-icon>
+
+                          <span class="card-item-text">4 People</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="flash-outline" role="img" class="md hydrated"
+                            aria-label="flash outline"></ion-icon>
+
+                          <span class="card-item-text">Gasoline</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="speedometer-outline" role="img" class="md hydrated"
+                            aria-label="speedometer outline"></ion-icon>
+
+                          <span class="card-item-text">8.2km / 1-litre</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="hardware-chip-outline" role="img" class="md hydrated"
+                            aria-label="hardware chip outline"></ion-icon>
+
+                          <span class="card-item-text">Automatic</span>
+                        </li>
+
+                      </ul>
+
+                      <div class="card-price-wrapper">
+
+                        <p class="card-price">
+                          <strong>$350</strong> / month
+                        </p>
+
+                        <button class="btn fav-btn" aria-label="Add to favourite list">
+                          <ion-icon name="heart-outline" role="img" class="md hydrated"
+                            aria-label="heart outline"></ion-icon>
+                        </button>
+
+                        <A href="rabii.html"> <button class="btn">Rent now</button></A>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="featured-car-card">
+
+                    <figure class="card-banner">
+                      <img src="car-3.jpg" alt="Volkswagen T-Cross 2020" loading="lazy" width="440" height="300"
+                        class="w-100">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <div class="card-title-wrapper">
+                        <h3 class="h3 card-title">
+                          <a href="hu.html">Volkswagen T-Cross</a>
+                        </h3>
+
+                        <data class="year" value="2020">2020</data>
+                      </div>
+
+                      <ul class="card-list">
+
+                        <li class="card-list-item">
+                          <ion-icon name="people-outline" role="img" class="md hydrated"
+                            aria-label="people outline"></ion-icon>
+
+                          <span class="card-item-text">4 People</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="flash-outline" role="img" class="md hydrated"
+                            aria-label="flash outline"></ion-icon>
+
+                          <span class="card-item-text">Gasoline</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="speedometer-outline" role="img" class="md hydrated"
+                            aria-label="speedometer outline"></ion-icon>
+
+                          <span class="card-item-text">5.3km / 1-litre</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="hardware-chip-outline" role="img" class="md hydrated"
+                            aria-label="hardware chip outline"></ion-icon>
+
+                          <span class="card-item-text">Automatic</span>
+                        </li>
+
+                      </ul>
+
+                      <div class="card-price-wrapper">
+
+                        <p class="card-price">
+                          <strong>$400</strong> / month
+                        </p>
+
+                        <button class="btn fav-btn" aria-label="Add to favourite list">
+                          <ion-icon name="heart-outline" role="img" class="md hydrated"
+                            aria-label="heart outline"></ion-icon>
+                        </button>
+
+                        <A href="rabii.html"> <button class="btn">Rent now</button></A>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="featured-car-card">
+
+                    <figure class="card-banner">
+                      <img src="car-4.jpg" alt="Cadillac Escalade 2020" loading="lazy" width="440" height="300"
+                        class="w-100">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <div class="card-title-wrapper">
+                        <h3 class="h3 card-title">
+                          <a href="hu.html">Cadillac Escalade</a>
+                        </h3>
+
+                        <data class="year" value="2020">2020</data>
+                      </div>
+
+                      <ul class="card-list">
+
+                        <li class="card-list-item">
+                          <ion-icon name="people-outline" role="img" class="md hydrated"
+                            aria-label="people outline"></ion-icon>
+
+                          <span class="card-item-text">4 People</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="flash-outline" role="img" class="md hydrated"
+                            aria-label="flash outline"></ion-icon>
+
+                          <span class="card-item-text">Gasoline</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="speedometer-outline" role="img" class="md hydrated"
+                            aria-label="speedometer outline"></ion-icon>
+
+                          <span class="card-item-text">7.7km / 1-litre</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="hardware-chip-outline" role="img" class="md hydrated"
+                            aria-label="hardware chip outline"></ion-icon>
+
+                          <span class="card-item-text">Automatic</span>
+                        </li>
+
+                      </ul>
+
+                      <div class="card-price-wrapper">
+
+                        <p class="card-price">
+                          <strong>$620</strong> / month
+                        </p>
+
+                        <button class="btn fav-btn" aria-label="Add to favourite list">
+                          <ion-icon name="heart-outline" role="img" class="md hydrated"
+                            aria-label="heart outline"></ion-icon>
+                        </button>
+
+                        <A href="rabii.html"> <button class="btn">Rent now</button></A>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="featured-car-card">
+
+                    <figure class="card-banner">
+                      <img src="car-5.jpg" alt="BMW 4 Series GTI 2021" loading="lazy" width="440" height="300"
+                        class="w-100">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <div class="card-title-wrapper">
+                        <h3 class="h3 card-title">
+                          <a href="hu.html">BMW 4 Series GTI</a>
+                        </h3>
+
+                        <data class="year" value="2021">2021</data>
+                      </div>
+
+                      <ul class="card-list">
+
+                        <li class="card-list-item">
+                          <ion-icon name="people-outline" role="img" class="md hydrated"
+                            aria-label="people outline"></ion-icon>
+
+                          <span class="card-item-text">4 People</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="flash-outline" role="img" class="md hydrated"
+                            aria-label="flash outline"></ion-icon>
+
+                          <span class="card-item-text">Gasoline</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="speedometer-outline" role="img" class="md hydrated"
+                            aria-label="speedometer outline"></ion-icon>
+
+                          <span class="card-item-text">7.6km / 1-litre</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="hardware-chip-outline" role="img" class="md hydrated"
+                            aria-label="hardware chip outline"></ion-icon>
+
+                          <span class="card-item-text">Automatic</span>
+                        </li>
+
+                      </ul>
+
+                      <div class="card-price-wrapper">
+
+                        <p class="card-price">
+                          <strong>$530</strong> / month
+                        </p>
+
+                        <button class="btn fav-btn" aria-label="Add to favourite list">
+                          <ion-icon name="heart-outline" role="img" class="md hydrated"
+                            aria-label="heart outline"></ion-icon>
+                        </button>
+
+                        <A href="rabii.html"> <button class="btn">Rent now</button></A>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="featured-car-card">
+
+                    <figure class="card-banner">
+                      <img src="car-6.jpg" alt="BMW 4 Series 2019" loading="lazy" width="440" height="300"
+                        class="w-100">
+                    </figure>
+
+                    <div class="card-content">
+
+                      <div class="card-title-wrapper">
+                        <h3 class="h3 card-title">
+                          <a href="hu.html">BMW 4 Series</a>
+                        </h3>
+
+                        <data class="year" value="2019">2019</data>
+                      </div>
+
+                      <ul class="card-list">
+
+                        <li class="card-list-item">
+                          <ion-icon name="people-outline" role="img" class="md hydrated"
+                            aria-label="people outline"></ion-icon>
+
+                          <span class="card-item-text">4 People</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="flash-outline" role="img" class="md hydrated"
+                            aria-label="flash outline"></ion-icon>
+
+                          <span class="card-item-text">Gasoline</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="speedometer-outline" role="img" class="md hydrated"
+                            aria-label="speedometer outline"></ion-icon>
+
+                          <span class="card-item-text">7.2km / 1-litre</span>
+                        </li>
+
+                        <li class="card-list-item">
+                          <ion-icon name="hardware-chip-outline" role="img" class="md hydrated"
+                            aria-label="hardware chip outline"></ion-icon>
+
+                          <span class="card-item-text">Automatic</span>
+                        </li>
+
+                      </ul>
+
+                      <div class="card-price-wrapper">
+
+                        <p class="card-price">
+                          <strong>$490</strong> / month
+                        </p>
+
+                        <button class="btn fav-btn" aria-label="Add to favourite list">
+                          <ion-icon name="heart-outline" role="img" class="md hydrated"
+                            aria-label="heart outline"></ion-icon>
+                        </button>
+
+                        <A href="rabii.html"> <button class="btn">Rent now</button></A>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 
               - #GET START
             -->
-      
-            <section class="section get-start">
-              <div class="container">
-      
-                <h2 class="h2 section-title" style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Get started with 4 simple steps</h2>
-      
-                <ul class="get-start-list">
-      
-                  <li>
-                    <div class="get-start-card">
-      
-                      <div class="card-icon icon-1">
-                        <ion-icon name="person-add-outline" role="img" class="md hydrated" aria-label="person add outline"></ion-icon>
-                      </div>
-      
-                      <h3 class="card-title">Create a profile</h3>
-      
-                      <p class="card-text">
-                        If you are going to use a passage of Lorem Ipsum, you need to be sure.
-                      </p>
-      
-                      <a href="mahad.html" class="card-link">Get started</a>
-      
+
+          <section class="section get-start">
+            <div class="container">
+
+              <h2 class="h2 section-title"
+                style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Get started with 4 simple
+                steps</h2>
+
+              <ul class="get-start-list">
+
+                <li>
+                  <div class="get-start-card">
+
+                    <div class="card-icon icon-1">
+                      <ion-icon name="person-add-outline" role="img" class="md hydrated"
+                        aria-label="person add outline"></ion-icon>
                     </div>
-                  </li>
-      
-                  <li>
-                    <div class="get-start-card">
-      
-                      <div class="card-icon icon-2">
-                        <ion-icon name="car-outline" role="img" class="md hydrated" aria-label="car outline"></ion-icon>
-                      </div>
-      
-                      <h3 class="card-title">Tell us what car you want</h3>
-      
-                      <p class="card-text">
-                        Various versions have evolved over the years, sometimes by accident, sometimes on purpose
-                      </p>
-      
+
+                    <h3 class="card-title">Create a profile</h3>
+
+                    <p class="card-text">
+                      If you are going to use a passage of Lorem Ipsum, you need to be sure.
+                    </p>
+
+                    <a href="signin.html" class="card-link">Get started</a>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="get-start-card">
+
+                    <div class="card-icon icon-2">
+                      <ion-icon name="car-outline" role="img" class="md hydrated" aria-label="car outline"></ion-icon>
                     </div>
-                  </li>
-      
-                  <li>
-                    <div class="get-start-card">
-      
-                      <div class="card-icon icon-3">
-                        <ion-icon name="person-outline" role="img" class="md hydrated" aria-label="person outline"></ion-icon>
-                      </div>
-      
-                      <h3 class="card-title">Match with seller</h3>
-      
-                      <p class="card-text">
-                        It to make a type specimen book. It has survived not only five centuries, but also the leap into
-                        electronic
-                      </p>
-      
+
+                    <h3 class="card-title">Tell us what car you want</h3>
+
+                    <p class="card-text">
+                      Various versions have evolved over the years, sometimes by accident, sometimes on purpose
+                    </p>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="get-start-card">
+
+                    <div class="card-icon icon-3">
+                      <ion-icon name="person-outline" role="img" class="md hydrated"
+                        aria-label="person outline"></ion-icon>
                     </div>
-                  </li>
-      
-                  <li>
-                    <div class="get-start-card">
-      
-                      <div class="card-icon icon-4">
-                        <ion-icon name="card-outline" role="img" class="md hydrated" aria-label="card outline"></ion-icon>
-                      </div>
-      
-                      <h3 class="card-title">Make a deal</h3>
-      
-                      <p class="card-text">
-                        There are many variations of passages of Lorem available, but the majority have suffered alteration
-                      </p>
-      
+
+                    <h3 class="card-title">Match with seller</h3>
+
+                    <p class="card-text">
+                      It to make a type specimen book. It has survived not only five centuries, but also the leap into
+                      electronic
+                    </p>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="get-start-card">
+
+                    <div class="card-icon icon-4">
+                      <ion-icon name="card-outline" role="img" class="md hydrated" aria-label="card outline"></ion-icon>
                     </div>
-                  </li>
-      
-                </ul>
-      
-              </div>
-            </section>
-      
-      
-      
-      
-      
-            <!-- 
+
+                    <h3 class="card-title">Make a deal</h3>
+
+                    <p class="card-text">
+                      There are many variations of passages of Lorem available, but the majority have suffered
+                      alteration
+                    </p>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </section>
+
+
+
+
+
+          <!-- 
               - #BLOG
             -->
-      
-            <section class="section blog" id="blog">
-              <div class="container">
-      
-                <h2 class="h2 section-title" style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Our Blog</h2>
-      
-                <ul class="blog-list has-scrollbar">
-      
-                  <li>
-                    <div class="blog-card">
-      
-                      <figure class="card-banner">
-      
-                        <a href="#">
-                          <img src="blog-1.jpg" alt="Opening of new offices of the company" loading="lazy" class="w-100">
-                        </a>
-      
-                        <a href="#" class="btn card-badge">Company</a>
-      
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">
-                          <a href="#">Opening of new offices of the company</a>
-                        </h3>
-      
-                        <div class="card-meta">
-      
-                          <div class="publish-date">
-                            <ion-icon name="time-outline" role="img" class="md hydrated" aria-label="time outline"></ion-icon>
-      
-                            <time datetime="2022-01-14">January 14, 2022</time>
-                          </div>
-      
-                          <div class="comments">
-                            <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated" aria-label="chatbubble ellipses outline"></ion-icon>
-      
-                            <data value="114">114</data>
-                          </div>
-      
+
+          <section class="section blog" id="blog">
+            <div class="container">
+
+              <h2 class="h2 section-title"
+                style="text-shadow: 0 0 40px #00fffb, 0 0 40px #0081bc; color: antiquewhite;">Our Blog</h2>
+
+              <ul class="blog-list has-scrollbar">
+
+                <li>
+                  <div class="blog-card">
+
+                    <figure class="card-banner">
+
+                      <a href="#">
+                        <img src="blog-1.jpg" alt="Opening of new offices of the company" loading="lazy" class="w-100">
+                      </a>
+
+                      <a href="#" class="btn card-badge">Company</a>
+
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h3 class="h3 card-title">
+                        <a href="#">Opening of new offices of the company</a>
+                      </h3>
+
+                      <div class="card-meta">
+
+                        <div class="publish-date">
+                          <ion-icon name="time-outline" role="img" class="md hydrated"
+                            aria-label="time outline"></ion-icon>
+
+                          <time datetime="2022-01-14">January 14, 2022</time>
                         </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="blog-card">
-      
-                      <figure class="card-banner">
-      
-                        <a href="#">
-                          <img src="blog-2.jpg" alt="What cars are most vulnerable" loading="lazy" class="w-100">
-                        </a>
-      
-                        <a href="#" class="btn card-badge">Repair</a>
-      
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">
-                          <a href="#">What cars are most vulnerable</a>
-                        </h3>
-      
-                        <div class="card-meta">
-      
-                          <div class="publish-date">
-                            <ion-icon name="time-outline" role="img" class="md hydrated" aria-label="time outline"></ion-icon>
-      
-                            <time datetime="2022-01-14">January 14, 2022</time>
-                          </div>
-      
-                          <div class="comments">
-                            <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated" aria-label="chatbubble ellipses outline"></ion-icon>
-      
-                            <data value="114">114</data>
-                          </div>
-      
+
+                        <div class="comments">
+                          <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated"
+                            aria-label="chatbubble ellipses outline"></ion-icon>
+
+                          <data value="114">114</data>
                         </div>
-      
+
                       </div>
-      
+
                     </div>
-                  </li>
-      
-                  <li>
-                    <div class="blog-card">
-      
-                      <figure class="card-banner">
-      
-                        <a href="#">
-                          <img src="blog-3.jpg" alt="Statistics showed which average age" loading="lazy" class="w-100">
-                        </a>
-      
-                        <a href="#" class="btn card-badge">Cars</a>
-      
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">
-                          <a href="#">Statistics showed which average age</a>
-                        </h3>
-      
-                        <div class="card-meta">
-      
-                          <div class="publish-date">
-                            <ion-icon name="time-outline" role="img" class="md hydrated" aria-label="time outline"></ion-icon>
-      
-                            <time datetime="2022-01-14">January 14, 2022</time>
-                          </div>
-      
-                          <div class="comments">
-                            <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated" aria-label="chatbubble ellipses outline"></ion-icon>
-      
-                            <data value="114">114</data>
-                          </div>
-      
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="blog-card">
+
+                    <figure class="card-banner">
+
+                      <a href="#">
+                        <img src="blog-2.jpg" alt="What cars are most vulnerable" loading="lazy" class="w-100">
+                      </a>
+
+                      <a href="#" class="btn card-badge">Repair</a>
+
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h3 class="h3 card-title">
+                        <a href="#">What cars are most vulnerable</a>
+                      </h3>
+
+                      <div class="card-meta">
+
+                        <div class="publish-date">
+                          <ion-icon name="time-outline" role="img" class="md hydrated"
+                            aria-label="time outline"></ion-icon>
+
+                          <time datetime="2022-01-14">January 14, 2022</time>
                         </div>
-      
-                      </div>
-      
-                    </div>
-                  </li>
-      
-                  <li>
-                    <div class="blog-card">
-      
-                      <figure class="card-banner">
-      
-                        <a href="#">
-                          <img src="blog-4.jpg" alt="What´s required when renting a car?" loading="lazy" class="w-100">
-                        </a>
-      
-                        <a href="#" class="btn card-badge">Cars</a>
-      
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">
-                          <a href="#">What´s required when renting a car?</a>
-                        </h3>
-      
-                        <div class="card-meta">
-      
-                          <div class="publish-date">
-                            <ion-icon name="time-outline" role="img" class="md hydrated" aria-label="time outline"></ion-icon>
-      
-                            <time datetime="2022-01-14">January 14, 2022</time>
-                          </div>
-      
-                          <div class="comments">
-                            <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated" aria-label="chatbubble ellipses outline"></ion-icon>
-      
-                            <data value="114">114</data>
-                          </div>
-      
+
+                        <div class="comments">
+                          <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated"
+                            aria-label="chatbubble ellipses outline"></ion-icon>
+
+                          <data value="114">114</data>
                         </div>
-      
+
                       </div>
-      
+
                     </div>
-                  </li>
-      
-                  <li>
-                    <div class="blog-card">
-      
-                      <figure class="card-banner">
-      
-                        <a href="#">
-                          <img src="blog-5.jpg" alt="New rules for handling our cars" loading="lazy" class="w-100">
-                        </a>
-      
-                        <a href="#" class="btn card-badge">Company</a>
-      
-                      </figure>
-      
-                      <div class="card-content">
-      
-                        <h3 class="h3 card-title">
-                          <a href="#">New rules for handling our cars</a>
-                        </h3>
-      
-                        <div class="card-meta">
-      
-                          <div class="publish-date">
-                            <ion-icon name="time-outline" role="img" class="md hydrated" aria-label="time outline"></ion-icon>
-      
-                            <time datetime="2022-01-14">January 14, 2022</time>
-                          </div>
-      
-                          <div class="comments">
-                            <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated" aria-label="chatbubble ellipses outline"></ion-icon>
-      
-                            <data value="114">114</data>
-                          </div>
-      
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="blog-card">
+
+                    <figure class="card-banner">
+
+                      <a href="#">
+                        <img src="blog-3.jpg" alt="Statistics showed which average age" loading="lazy" class="w-100">
+                      </a>
+
+                      <a href="#" class="btn card-badge">Cars</a>
+
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h3 class="h3 card-title">
+                        <a href="#">Statistics showed which average age</a>
+                      </h3>
+
+                      <div class="card-meta">
+
+                        <div class="publish-date">
+                          <ion-icon name="time-outline" role="img" class="md hydrated"
+                            aria-label="time outline"></ion-icon>
+
+                          <time datetime="2022-01-14">January 14, 2022</time>
                         </div>
-      
+
+                        <div class="comments">
+                          <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated"
+                            aria-label="chatbubble ellipses outline"></ion-icon>
+
+                          <data value="114">114</data>
+                        </div>
+
                       </div>
-      
+
                     </div>
-                  </li>
-      
-                </ul>
-      
-              </div>
-            </section>
-      
-          </article>
-        </main>
-      
-      
-      
-      
-      
-        <!-- 
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="blog-card">
+
+                    <figure class="card-banner">
+
+                      <a href="#">
+                        <img src="blog-4.jpg" alt="What´s required when renting a car?" loading="lazy" class="w-100">
+                      </a>
+
+                      <a href="#" class="btn card-badge">Cars</a>
+
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h3 class="h3 card-title">
+                        <a href="#">What´s required when renting a car?</a>
+                      </h3>
+
+                      <div class="card-meta">
+
+                        <div class="publish-date">
+                          <ion-icon name="time-outline" role="img" class="md hydrated"
+                            aria-label="time outline"></ion-icon>
+
+                          <time datetime="2022-01-14">January 14, 2022</time>
+                        </div>
+
+                        <div class="comments">
+                          <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated"
+                            aria-label="chatbubble ellipses outline"></ion-icon>
+
+                          <data value="114">114</data>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+                <li>
+                  <div class="blog-card">
+
+                    <figure class="card-banner">
+
+                      <a href="#">
+                        <img src="blog-5.jpg" alt="New rules for handling our cars" loading="lazy" class="w-100">
+                      </a>
+
+                      <a href="#" class="btn card-badge">Company</a>
+
+                    </figure>
+
+                    <div class="card-content">
+
+                      <h3 class="h3 card-title">
+                        <a href="#">New rules for handling our cars</a>
+                      </h3>
+
+                      <div class="card-meta">
+
+                        <div class="publish-date">
+                          <ion-icon name="time-outline" role="img" class="md hydrated"
+                            aria-label="time outline"></ion-icon>
+
+                          <time datetime="2022-01-14">January 14, 2022</time>
+                        </div>
+
+                        <div class="comments">
+                          <ion-icon name="chatbubble-ellipses-outline" role="img" class="md hydrated"
+                            aria-label="chatbubble ellipses outline"></ion-icon>
+
+                          <data value="114">114</data>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+                </li>
+
+              </ul>
+
+            </div>
+          </section>
+
+      </article>
+    </main>
+
+
+
+
+
+    <!-- 
           - #FOOTER
         -->
-      
-        <footer class="footer">
-          <div class="container">
-      
-            <div class="footer-top">
-      
-              <div class="footer-brand">
-                <a href="#" class="logo">
-                  <img src="WhatsApp Image 2024-02-14 at 00.44.19_0e07bad9.jpg" alt="Ridex logo" style="border-radius: 20PX;">
-                </a>
-      
-                <p class="footer-text">
-                  Search for cheap rental cars in New York. With a diverse fleet of 19,000 vehicles, Waydex offers its
-                  consumers an
-                  attractive and fun selection.
-                </p>
-              </div>
-      
-              <ul class="footer-list">
-      
-                <li>
-                  <p class="footer-list-title">Company</p>
-                </li>
-      
-                <li>
-                  <a href="about us.html" class="footer-link">About us</a>
-                </li>
-      
-                <li>
-                  <a href="hu.html" class="footer-link">Pricing plans</a>
-                </li>
 
-                <li>
-                  <a href="dashboard.html" class="footer-link">Dashboard</a>
-                </li>
-      
-                <li>
-                  <a href="#blog" class="footer-link">Our blog</a>
-                </li>
-      
-                <li>
-                  <a href="about us.html" class="footer-link">Contacts</a>
-                </li>
-      
-              </ul>
-      
-              <ul class="footer-list">
-      
-                <li>
-                  <p class="footer-list-title">Support</p>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Help center</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Ask a question</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Privacy policy</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Terms &amp; conditions</a>
-                </li>
-      
-              </ul>
-      
-              <ul class="footer-list">
-      
-                <li>
-                  <p class="footer-list-title">Neighborhoods in New York</p>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Manhattan</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Central New York City</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Upper East Side</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Queens</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Theater District</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Midtown</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">SoHo</a>
-                </li>
-      
-                <li>
-                  <a href="#" class="footer-link">Chelsea</a>
-                </li>
-      
-              </ul>
-      
-            </div>
-      
-            <div class="footer-bottom">
-      
-              <ul class="social-list">
-      
-                <li>
-                  <a href="https://www.facebook.com/profile.php?id=100082118271693&mibextid=ZbWKwL" class="social-link">
-                    <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="https://www.instagram.com/talhaashraf92?igsh=aXR0dnRjMHB2bWd3" class="social-link">
-                    <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="" class="social-link">
-                    <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="https://www.linkedin.com/in/talha-ashraf-b13a26297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-link">
-                    <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="#" class="social-link">
-                    <ion-icon name="logo-skype" role="img" class="md hydrated" aria-label="logo skype"></ion-icon>
-                  </a>
-                </li>
-      
-                <li>
-                  <a href="talhaashraf3565506@gmail.com" class="social-link">
-                    <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
-                  </a>
-                </li>
-      
-              </ul>
-      
-              <p class="copyright" style="text-align: center;">
-                © 2024 <br> <a href="#">Presented By</a> Simga developers <br>groupleader: Talha Ashraf <br> groupmembers: Naveed-ul-hasan & M Mahad
-              </p>
-      
-            </div>
-      
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer-top">
+
+          <div class="footer-brand">
+            <a href="#" class="logo">
+              <img src="WhatsApp Image 2024-02-14 at 00.44.19_0e07bad9.jpg" alt="Ridex logo"
+                style="border-radius: 20PX;">
+            </a>
+
+            <p class="footer-text">
+              Search for cheap rental cars in New York. With a diverse fleet of 19,000 vehicles, Waydex offers its
+              consumers an
+              attractive and fun selection.
+            </p>
           </div>
-        </footer>
-      
-      
-      
-      
-      
-        <!-- 
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Company</p>
+            </li>
+
+            <li>
+              <a href="about us.html" class="footer-link">About us</a>
+            </li>
+
+            <li>
+              <a href="hu.html" class="footer-link">Pricing plans</a>
+            </li>
+
+            <li>
+              <a href="dashboard.html" class="footer-link">Dashboard</a>
+            </li>
+
+            <li>
+              <a href="#blog" class="footer-link">Our blog</a>
+            </li>
+
+            <li>
+              <a href="about us.html" class="footer-link">Contacts</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Support</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Help center</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Ask a question</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Privacy policy</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Terms &amp; conditions</a>
+            </li>
+
+          </ul>
+
+          <ul class="footer-list">
+
+            <li>
+              <p class="footer-list-title">Neighborhoods in New York</p>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Manhattan</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Central New York City</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Upper East Side</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Queens</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Theater District</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Midtown</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">SoHo</a>
+            </li>
+
+            <li>
+              <a href="#" class="footer-link">Chelsea</a>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://www.facebook.com/profile.php?id=100082118271693&mibextid=ZbWKwL" class="social-link">
+                <ion-icon name="logo-facebook" role="img" class="md hydrated" aria-label="logo facebook"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/talhaashraf92?igsh=aXR0dnRjMHB2bWd3" class="social-link">
+                <ion-icon name="logo-instagram" role="img" class="md hydrated" aria-label="logo instagram"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="" class="social-link">
+                <ion-icon name="logo-twitter" role="img" class="md hydrated" aria-label="logo twitter"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/talha-ashraf-b13a26297?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                class="social-link">
+                <ion-icon name="logo-linkedin" role="img" class="md hydrated" aria-label="logo linkedin"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="#" class="social-link">
+                <ion-icon name="logo-skype" role="img" class="md hydrated" aria-label="logo skype"></ion-icon>
+              </a>
+            </li>
+
+            <li>
+              <a href="talhaashraf3565506@gmail.com" class="social-link">
+                <ion-icon name="mail-outline" role="img" class="md hydrated" aria-label="mail outline"></ion-icon>
+              </a>
+            </li>
+
+          </ul>
+
+          <p class="copyright" style="text-align: center;">
+            © 2024 <br> <a href="#">Presented By</a> Sigma Developers <br>Groupleader: Talha Ashraf <br> Groupmembers:
+            SyedNaveedulhasan & M Mahad
+          </p>
+
+        </div>
+
+      </div>
+    </footer>
+
+
+
+
+
+    <!-- 
           - custom js link
         -->
-        <script src="./assets/js/script.js"></script>
-      
-        <!-- 
+    <script src="./assets/js/script.js"></script>
+
+    <!-- 
           - ionicon link
         -->
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-      
-      
-      
-      </body>
-    <script src="script.js"></script>
-
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+
+  </body>
+  <script src="script.js"></script>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    let UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
+    let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
+
+    let MsgHead = document.getElementById('msg');
+    let GreetHead = document.getElementById('greet');
+    let SignoutBtn = document.getElementById('signoutbutton');
+
+
+    let Signout = () => {
+      sessionStorage.removeItem("user-creds");
+      sessionStorage.removeItem("user-info");
+      window.location.href = 'signin.html'
+    }
+
+
+    let CheckCred = () => {
+      if (!sessionStorage.getItem("user-creds"))
+        window.location.href = 'signin.html'
+
+      else {
+        MsgHead.innerText = `user with email "${UserCreds.email}" logged in`;
+        GreetHead.innerText = `welcome ${UserInfo.name}!`;
+
+      }
+    }
+
+    window.addEventListener('load', CheckCred);
+    SignoutBtn.addEventListener('click', Signout);
+
+
+  </script>
 
 
 </body>
+
 </html>

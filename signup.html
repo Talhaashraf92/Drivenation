@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        header h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            color: aliceblue;
+            text-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+            letter-spacing: 4px;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        p {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .already {
+            color: white;
+            display: flex;
+            align-items: left;
+            justify-content: left;
+            margin-top: 30px;
+        }
+
+        .signin {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        #signin-link {
+            margin-bottom: 10px;
+            color: #6600ff  !important;
+            font-size: 15px !important;
+        }
+        #signin-link:hover {
+            margin-bottom: 10px;
+            background: #6600ff !important;
+            color: #fff !important;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #6600ff ,
+                0 0 25px #6600ff  ,
+                0 0 50px #6600ff ,
+                0 0 100px #6600ff  ;
+        }
+
+        .login-box {
+            position: absolute;
+            margin-top: 25px;
+            top: 50%;
+            left: 50%;
+            width: 400px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(#006992, #2e1760);
+            box-sizing: border-box;
+            box-shadow: 0 0 20px #00fffb, 0 0 40px #0081bc;
+            border-radius: 10px;
+        }
+
+        .login-box h2 {
+            margin: 0 0 30px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+
+        .login-box .user-box {
+            position: relative;
+        }
+
+        .login-box .user-box input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            margin-bottom: 30px;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+
+        .login-box .user-box label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .login-box .user-box input:focus~label,
+        .login-box .user-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+
+        .login-box form a {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #03e9f4;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 20px;
+            letter-spacing: 4px
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-left: 37px;
+        }
+
+        .button-container button {
+            margin-right: 10px;
+        }
+
+        .login-box a:hover {
+            background: #03e9f4;
+            color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+        }
+
+        .forget {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .login-box a span {
+            position: absolute;
+            display: block;
+        }
+
+        .login-box a span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #03e9f4);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #03e9f4);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: .25s
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #03e9f4);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: .5s
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .login-box a span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #03e9f4);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: .75s
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+    </style>
+    <title>Innovate Your Ride: Register with DriveNation Car Showroom!</title>
+</head>
+
+<body>
+    <header>
+
+        <H2>WELCOME TO DriveNation</H2> <br>
+
+    </header>
+    <div class="login-box">
+        <h2>Sign Up</h2>
+        <form id="MainForm">
+            <div class="user-box">
+                <input type="text" id="nameInp" name="" required="">
+                <label>Name</label>
+            </div>
+            <div class="user-box">
+                <input type="email" id="emailInp" name="" required="">
+                <label>Email</label>
+            </div>
+            <div class="user-box">
+                <input type="password" id="passwordInp" name="" required="">
+                <label>Password</label>
+            </div>
+            <div>
+                <p>Forget Your Password?</p>
+            </div>
+            <div class="button-container">
+                <a type="submit" href="#" id="submitBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Create Account
+                </a>
+
+
+            </div>
+            <div class="signin">
+                <p class="already">Already have an Account?</p>
+                <a id="signin-link" href="signin.html">
+                    Sign In
+                </a>
+            </div>
+        </form>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        import { getFirestore, doc, setDoc } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCBp9WKFHvlxssPsc5k09qxiLPhu_tARF8",
+            authDomain: "final-drive-nation.firebaseapp.com",
+            projectId: "final-drive-nation",
+            storageBucket: "final-drive-nation.appspot.com",
+            messagingSenderId: "309360975046",
+            appId: "1:309360975046:web:daca65047edfa6f94acbc7"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore();
+        const auth = getAuth(app);
+
+        let nameInp = document.getElementById('nameInp');
+        let emailInp = document.getElementById('emailInp');
+        let PassInp = document.getElementById('passwordInp');
+        let MainForm = document.getElementById('MainForm');
+        let RegisterUser = evt => {
+            evt.preventDefault();
+
+            createUserWithEmailAndPassword(auth, emailInp.value, PassInp.value)
+                .then(async (credentials) => {
+                    var ref = doc(db, "UserAuthList", credentials.user.uid);
+                    await setDoc(ref, {
+                        name: nameInp.value
+                    })
+                })
+                .catch((error) => {
+                    alert(error.message);
+                    console.log(error.code);
+                    console.log(error.message);
+                });
+        }
+
+        MainForm.addEventListener('submit', RegisterUser);
+
+        let SubmitBtn = document.getElementById('submitBtn');
+        SubmitBtn.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            RegisterUser(evt);
+        });
+    </script>
+    
+
+</body>
+
+</html>
