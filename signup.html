@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        header h2 {
+           header h2 {
             font-size: 30px;
             margin-bottom: 20px;
             text-transform: uppercase;
@@ -135,17 +135,56 @@
             letter-spacing: 4px
         }
 
+            
+        
+        
+
         .button-container {
             display: flex;
             justify-content: space-between;
-            margin-left: 37px;
+            margin-left: 65px;
         }
 
         .button-container button {
             margin-right: 10px;
         }
 
-        .login-box a:hover {
+
+        .login-box .user-box input:focus~label,
+        .login-box .user-box input:valid~label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 12px;
+        }
+
+        p {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    .button-container button{
+    background-color: transparent;
+    border-color: transparent;
+}
+        .button-container button {
+            position: relative;
+            display: inline-block;
+            padding: 10px 20px;
+            color: #03e9f4;
+            font-size: 16px;
+            text-decoration: none;
+            text-transform: uppercase;
+            overflow: hidden;
+            transition: .5s;
+            margin-top: 20px;
+            letter-spacing: 0px
+            
+              
+        }
+
+        .button-container button:hover {
             background: #03e9f4;
             color: #fff;
             border-radius: 5px;
@@ -154,18 +193,12 @@
                 0 0 50px #03e9f4,
                 0 0 100px #03e9f4;
         }
-
-        .forget {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .login-box a span {
+        .button-container button span {
             position: absolute;
             display: block;
         }
 
-        .login-box a span:nth-child(1) {
+        .one {
             top: 0;
             left: -100%;
             width: 100%;
@@ -185,7 +218,7 @@
             }
         }
 
-        .login-box a span:nth-child(2) {
+        .two {
             top: -100%;
             right: 0;
             width: 2px;
@@ -206,7 +239,7 @@
             }
         }
 
-        .login-box a span:nth-child(3) {
+        .three {
             bottom: 0;
             right: -100%;
             width: 100%;
@@ -227,7 +260,7 @@
             }
         }
 
-        .login-box a span:nth-child(4) {
+        .four {
             bottom: -100%;
             left: 0;
             width: 2px;
@@ -247,50 +280,45 @@
                 bottom: 100%;
             }
         }
+
     </style>
     <title>Innovate Your Ride: Register with DriveNation Car Showroom!</title>
 </head>
 
 <body>
     <header>
-
-        <H2>WELCOME TO DriveNation</H2> <br>
-
+        <h2>WELCOME TO DriveNation</h2>
     </header>
+
     <div class="login-box">
         <h2>Sign Up</h2>
         <form id="MainForm">
             <div class="user-box">
                 <input type="text" id="nameInp" name="" required="">
-                <label>Name</label>
+                <label for="nameInp">Name</label>
             </div>
             <div class="user-box">
                 <input type="email" id="emailInp" name="" required="">
-                <label>Email</label>
+                <label for="emailInp">Email</label>
             </div>
             <div class="user-box">
                 <input type="password" id="passwordInp" name="" required="">
-                <label>Password</label>
+                <label for="passwordInp">Password</label>
             </div>
             <div>
-                <p>Forget Your Password?</p>
+                <p class="forget">Forget Your Password?</p>
             </div>
             <div class="button-container">
-                <a type="submit" href="#" id="submitBtn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    Create Account
-                </a>
-
-
+                <button type="submit" id="submitBtn">
+                    <span class="one"></span>
+                    <span class="two"></span>
+                    <span class="three"></span>
+                    <span class="four"></span>
+                    Create Account</button>
             </div>
             <div class="signin">
                 <p class="already">Already have an Account?</p>
-                <a id="signin-link" href="signin.html">
-                    Sign In
-                </a>
+                <a id="signin-link" href="signin.html">Sign In</a>
             </div>
         </form>
     </div>
@@ -314,36 +342,57 @@
         const db = getFirestore();
         const auth = getAuth(app);
 
-        let nameInp = document.getElementById('nameInp');
-        let emailInp = document.getElementById('emailInp');
-        let PassInp = document.getElementById('passwordInp');
-        let MainForm = document.getElementById('MainForm');
-        let RegisterUser = evt => {
+        const nameInp = document.getElementById('nameInp');
+        const emailInp = document.getElementById('emailInp');
+        const PassInp = document.getElementById('passwordInp');
+        const MainForm = document.getElementById('MainForm');
+        const submitBtn = document.getElementById('submitBtn');
+
+        const RegisterUser = evt => {
             evt.preventDefault();
+
+            // Disable the button during sign-up process
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Signing Up...";
 
             createUserWithEmailAndPassword(auth, emailInp.value, PassInp.value)
                 .then(async (credentials) => {
-                    var ref = doc(db, "UserAuthList", credentials.user.uid);
-                    await setDoc(ref, {
-                        name: nameInp.value
-                    })
+                    const ref = doc(db, "UserAuthList", credentials.user.uid);
+                    await setDoc(ref, { name: nameInp.value });
+
+                    // Redirect to index.html after successful sign-up
+                    window.location.href = "index.html"; 
                 })
                 .catch((error) => {
-                    alert(error.message);
-                    console.log(error.code);
-                    console.log(error.message);
+                    let errorMessage = "An error occurred while signing up.";
+
+                    // Handle different error codes
+                    switch (error.code) {
+                        case "auth/email-already-in-use":
+                            errorMessage = "This email is already in use. Please try signing in instead.";
+                            break;
+                        case "auth/weak-password":
+                            errorMessage = "Please choose a stronger password.";
+                            break;
+                        case "auth/invalid-email":
+                            errorMessage = "Please enter a valid email address.";
+                            break;
+                        default:
+                            errorMessage = "An unexpected error occurred. Please try again later.";
+                            break;
+                    }
+
+                    alert(errorMessage);
+                    console.error(error);
+
+                    // Re-enable the button and revert the text
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Create Account";
                 });
         }
 
         MainForm.addEventListener('submit', RegisterUser);
-
-        let SubmitBtn = document.getElementById('submitBtn');
-        SubmitBtn.addEventListener('click', function (evt) {
-            evt.preventDefault();
-            RegisterUser(evt);
-        });
     </script>
-    
 
 </body>
 

@@ -1855,39 +1855,7 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <script>
-    let UserCreds = JSON.parse(sessionStorage.getItem("user-creds"));
-    let UserInfo = JSON.parse(sessionStorage.getItem("user-info"));
-
-    let MsgHead = document.getElementById('msg');
-    let GreetHead = document.getElementById('greet');
-    let SignoutBtn = document.getElementById('signoutbutton');
-
-
-    let Signout = () => {
-      sessionStorage.removeItem("user-creds");
-      sessionStorage.removeItem("user-info");
-      window.location.href = 'signin.html'
-    }
-
-
-    let CheckCred = () => {
-      if (!sessionStorage.getItem("user-creds"))
-        window.location.href = 'signin.html'
-
-      else {
-        MsgHead.innerText = `user with email "${UserCreds.email}" logged in`;
-        GreetHead.innerText = `welcome ${UserInfo.name}!`;
-
-      }
-    }
-
-    window.addEventListener('load', CheckCred);
-    SignoutBtn.addEventListener('click', Signout);
-
-
-    
-  </script>
+  
 
 
 </body>
